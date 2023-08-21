@@ -10,6 +10,9 @@
     $currentDate = date("Y-m-d H:i:s");
     echo "<p>Current server date and time: $currentDate</p>";
     ?>
+    <?php
+    echo "<p>Server IP address: " . $_SERVER['SERVER_ADDR'] . "</p>";
+    ?>
 </body>
 </html>
 
