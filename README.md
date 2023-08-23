@@ -14,7 +14,7 @@ and try again.
 
 > ⚠️ Warning! This script is mainly for modifying tables, if you wan't to perform actual queries just run:
 >```shell
-docker exec -i crimson-mysql-1 mysql -uuser -ppassword cafe
+>docker exec -i crimson-mysql-1 mysql -uuser -ppassword cafe
 >```
 
 ## Cafe Database Not Found:
