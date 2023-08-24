@@ -7,6 +7,7 @@ class Pages
 
     public function index()
     {
+        echo "you are on pages.index";
     }
 
     public function about($id)
