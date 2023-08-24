@@ -48,4 +48,4 @@ docker-compose up --build
 ```
 
 ## :)
-> for those running windows ```shell git config --global core.autocrlf false```
+> for those running windows ```git config --global core.autocrlf false```
