@@ -46,3 +46,6 @@ docker volume rm [folder]_dbData
 ```shell
 docker-compose up --build
 ```
+
+## :)
+> for those running windows ```shell git config --global core.autocrlf true```
