@@ -1,1 +1,5 @@
-Ya'll aint shii
+<?php
+
+require_once '../app/bootstrap.php';
+
+?>
