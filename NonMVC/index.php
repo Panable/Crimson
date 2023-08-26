@@ -33,17 +33,17 @@
     </nav>
 
     <section class="card-section pt-4 mx-4">
-        <div class="row gx-lg-5">
-            <div class="col-lg-6 col-xxl-4 mb-5">
-                <div class="card bg-light border-0 h-100">
-
-                    <?php echo $card ?>
-
-                    <?php echo $card ?>
-
-                    <?php echo $card ?>
-
-                </div>
+        <div class="row">
+            <div class="col">
+                <?php echo $card ?>
+            </div>
+            <div class="col">
+                <?php echo $card ?>
+            </div>
+            <div class="col">
+                <?php echo $card ?>
+            </div>
+        </div>
     </section>
 
     <footer class="pt-4 mx-4">
