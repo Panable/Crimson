@@ -10,3 +10,10 @@ $description = '<div>
                         Cheese and Diary Group +20 Health, Meat and Poultry Group +20 Health, Bread and Grains Group
                         +20 Health</p>
                 </div>';
+$card = '<div class="card bg-light border-0 h-75">
+            <div class="shadow p-3 card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                ' . $image . '
+                ' . $description . '
+            </div>
+        </div>';
+?>

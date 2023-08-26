@@ -16,7 +16,6 @@
     <?php require_once "template.php"; ?>
 
     <nav class="navbar navbar-expand-lg bg-dark py-lg-4">
-
         <div class="col-sm">
             <p class="text-white"> Testing</p>
         </div>
@@ -37,26 +36,14 @@
         <div class="row gx-lg-5">
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
-                    <div class="shadow p-3 card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                        <?php echo $image; ?>
-                        <?php echo $description; ?>
-                    </div>
 
-                    <div class="card bg-light border-0 h-75">
-                        <div class="shadow p-3 card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <?php echo $image; ?>
-                            <?php echo $description; ?>
-                        </div>
-                    </div>
+                    <?php echo $card ?>
 
-                    <div class="card bg-light border-0 h-75">
-                        <div class="shadow p-3 card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <?php echo $image; ?>
-                            <?php echo $description; ?>
-                        </div>
-                    </div>
+                    <?php echo $card ?>
+
+                    <?php echo $card ?>
+
                 </div>
-            </div>
     </section>
 
     <footer class="pt-4 mx-4">
