@@ -1,3 +1,5 @@
 <?php
 
-echo dirname(dirname(__FILE__));
+define('APPROOT', dirname(dirname(__FILE__)));
+define('URLROOT', 'http://localhost/crimsonmvc/');
+define('SITENAME', 'CrimsonMVC');
