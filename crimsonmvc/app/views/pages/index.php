@@ -3,9 +3,9 @@
     <?php echo $data['title']; ?>
 </h1>
 <ul>
-<?php foreach ($data['posts'] as $post): ?>
+<?php foreach ($data['menu'] as $item): ?>
 
-    <li><?php echo $post->name; ?></li>
+    <li><?php echo $item->name; ?></li>
 <?php endforeach; ?>
 </ul>
 <?php require APPROOT . '/views/inc/footer.php'; ?>

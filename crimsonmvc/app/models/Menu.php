@@ -1,5 +1,5 @@
 <?php
-class Post
+class Menu
 {
     private $db;
 
@@ -8,7 +8,7 @@ class Post
         $this->db = new Database;
     }
 
-    public function getPosts()
+    public function getMenu()
     {
         $this->db->query("SELECT * FROM menu");
         return $this->db->resultSet();

@@ -1,19 +1,20 @@
 <?php
 class Pages extends Controller
 {
-private $postModel;
+    private $postModel;
     public function __construct()
     {
-        $this->postModel = $this->model('Post');
+        $this->postModel = $this->model('Menu');
     }
 
     public function index()
     {
-        $posts = $this->postModel->getPosts();
-        $data = ['title' => 'Welcome',
-        'posts' => $posts];
+        $posts = $this->postModel->getMenu();
+        $data = [
+            'title' => 'Welcome',
+            'menu' => $posts
+        ];
         $this->view('pages/index', $data);
-
     }
 
     public function about()
