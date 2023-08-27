@@ -5,7 +5,7 @@
 <ul>
 <?php foreach ($data['menu'] as $item): ?>
 
-    <li><?php echo $item->name; ?></li>
+    <li><?php echo $item->name . "-$" . $item->price . "-" . $item->description; ?></li>
 <?php endforeach; ?>
 </ul>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
