@@ -1,4 +1,8 @@
-Drop Table if exists MenuTable
+Drop Table if exists Menu
+Drop Table if exists Employees
+Drop Table if exists OnlineBookings
+Drop Table if exists Orders
+Drop Table if exists OrderItems
 
 CREATE DATABASE MenuTable;
 USE MenuTable;
@@ -12,6 +16,74 @@ CREATE TABLE Menu (
     Photo NVARCHAR(255)
 );
 
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name NVARCHAR(100),
+    Email NVARCHAR(100),
+    Position NVARCHAR(50),
+    Password NVARCHAR(25)
+);
+
+CREATE TABLE OnlineBookings (
+    Phone_Number INT PRIMARY KEY,
+    Time TIME,
+    Date DATE,
+    Guests INT
+);
+
+REATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    TableNumber INT
+);
+
+CREATE TABLE OrderItems (
+    OrderItemID INT PRIMARY KEY AUTO_INCREMENT,
+    OrderID INT,
+    ItemID INT
+);
+
+INSERT INTO Orders (OrderID, TableNumber)
+VALUES
+    (1001, NULL),
+    (1002, NULL),
+    (1003, NULL),
+    (1004, NULL),
+    (1005, NULL);
+
+INSERT INTO OrderItems (OrderID, ItemID)
+VALUES
+    (1001, 101),
+    (1001, 102),
+    (1001, 105),
+    (1002, 103),
+    (1002, 104),
+    (1003, 101),
+    (1003, 105),
+    (1003, 106),
+    (1004, 102),
+    (1004, 104),
+    (1004, 107),
+    (1005, 103),
+    (1005, 106),
+    (1005, 108);
+
+
+
+INSERT INTO OnlineBookings (Phone_Number, Time, Date, Guests)
+VALUES
+    (1234567890, '09:00:00', '2023-08-28', 2),
+    (9876543210, '14:30:00', '2023-08-29', 4),
+    (5555555555, '18:45:00', '2023-08-30', 6),
+    (7777777777, '12:15:00', '2023-08-31', 3),
+    (8888888888, '20:00:00', '2023-09-01', 5);
+
+INSERT INTO Employees (ID, Name, Email, Position, Password)
+VALUES
+    (1, 'John Smith', 'john.smith@email.com', 'Manager', 'Password123'),
+    (2, 'Jane Doe', 'jane.doe@email.com', 'Employee', 'SecurePass'),
+    (3, 'Alice Brown', 'alice.brown@email.com', 'Employee', '12345'),
+    (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', 'SecretPass'),
+    (5, 'Sarah White', 'sarah.white@email.com', 'Employee', 'Pass123');
 
 INSERT INTO Menu (ID, Name, Price, Description, Photo)
 VALUES
