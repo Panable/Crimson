@@ -1,10 +1,10 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <?php require APPROOT . '/views/inc/template.php'; ?>
 
-<h1>
-    <?php echo $data['title']; ?>
-</h1>
 <section class="card-section pt-4 mx-4">
+    <div class="my-5 mx-3">
+        <h2> Menu </h2>
+    </div>
     <div class="my-5 mx-3">
     </div>
     <div class="row">
