@@ -1,11 +1,11 @@
 <?php
-class Menu
+class menumodel
 {
     private $db;
 
     public function __construct()
     {
-        $this->db = new Database;
+        $this->db = new database;
     }
 
     public function getMenu()

@@ -1,10 +1,10 @@
 <?php
-class Pages extends Controller
+class pages extends controller
 {
     private $postModel;
     public function __construct()
     {
-        $this->postModel = $this->model('Menu');
+        $this->postModel = $this->model('menumodel');
     }
 
     public function index()
@@ -20,6 +20,6 @@ class Pages extends Controller
     public function about()
     {
         $data = ['title' => 'About Us'];
-        $this->view('pages/index', $data);
+        $this->view('pages/about', $data);
     }
 }
