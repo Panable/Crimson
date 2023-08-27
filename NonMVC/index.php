@@ -31,7 +31,7 @@
                 <a class="p-2 text-white">Menu</a>
                 <a class="p-2 text-white">"Profile Login"</a>
                 <a class="p-2 text-white">Staff Login</a>
-        </div>
+            </div>
     </nav>
     <!-- Navbar Section End-->
 
@@ -65,6 +65,7 @@
     </footer>
 
 </body>
+
 </html>
 
 <!--
