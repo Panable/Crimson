@@ -1,4 +1,4 @@
-Drop Table if exists Menu
+Drop Table if exists menu
 Drop Table if exists Employees
 Drop Table if exists OnlineBookings
 Drop Table if exists Orders
@@ -8,7 +8,7 @@ CREATE DATABASE MenuTable;
 USE MenuTable;
 
 
-CREATE TABLE Menu (
+CREATE TABLE menu (
     ID INT PRIMARY KEY,
     Name NVARCHAR(50),
     Price DECIMAL(10, 2), 
@@ -85,7 +85,7 @@ VALUES
     (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', 'SecretPass'),
     (5, 'Sarah White', 'sarah.white@email.com', 'Employee', 'Pass123');
 
-INSERT INTO Menu (ID, Name, Price, Description, Photo)
+INSERT INTO menu (ID, Name, Price, Description, Photo)
 VALUES
     (1, 'Cappuccino', 4.99, 'A classic Italian coffee', 'images/cappuccino.jpg'),
     (2, 'Espresso', 3.49, 'Strong and concentrated', 'images/espresso.jpg'),
