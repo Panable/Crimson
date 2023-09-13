@@ -9,17 +9,18 @@
 </head>    
 <body>
     <nav class="navbar navbar-expand-lg py-lg-4 custom-nav">
-        <div class="col-sum">
-            <span class="material-symbols-outlined"> arrow_back </span>
-            <a href=""> Back </a>
-            <!-- <a class="navbar-brand" href="<?php echo URLROOT; ?>"><?php echo SITENAME; ?></a> -->
+        <div class="col-sm">
+            <span class="material-symbols-outlined pl-4"> arrow_back 
+                <a class="" href="" >Back</a>
+            </span>
+
         </div>
 
-        <div class="col-sum">
-            <h1 class="text-">Crimson Cafe</h1>
+        <div class="col-sm">
+            <h1 class="text-center">Crimson Cafe</h1>
         </div>
 
-        <div class="col-sum">
+        <div class="col-md">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
@@ -32,4 +33,6 @@
             </ul>
         </div>
 
+
+        
     </nav>
