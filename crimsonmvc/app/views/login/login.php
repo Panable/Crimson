@@ -1,0 +1,1 @@
+<?php require APPROOT . '/views/inc/header2.php'; ?>
