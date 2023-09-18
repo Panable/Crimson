@@ -29,4 +29,16 @@
 h1 {
     color: var(--header1-text);
     font-family: 'Croissant One', cursive;    
-  }
+}
+
+h2 {
+    color: var(--dark-text);
+    font-family: 'Croissant One', cursive;
+}
+
+button {
+    background-color: var(--nav-background);
+    color: var(--light-text);
+    font-family: 'DM Sans', sans-serif;
+}
+

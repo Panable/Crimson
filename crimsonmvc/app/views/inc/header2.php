@@ -9,30 +9,24 @@
 </head>    
 <body>
     <nav class="navbar navbar-expand-lg py-lg-4 custom-nav">
-        <div class="col-sm">
-            <span class="material-symbols-outlined pl-4"> arrow_back 
-                <a class="" href="" >Back</a>
-            </span>
+        <div class="container-fluid">
+            <div class="col-sm">
+                <a href="nav-link" href="<?php echo URLROOT; ?> pages/">
+                    <span class="material-symbols-outlined pl-5"> arrow_back </span>
+                    <span>Back</span>
+                </a>
+            </div>
 
+            <div class="col-sm">
+                <h1 class="text-center">Crimson Cafe</h1>
+            </div>
+
+            <div class="col-md">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <div class="col-sm">
-            <h1 class="text-center">Crimson Cafe</h1>
-        </div>
-
-        <div class="col-md">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo URLROOT; ?>pages/about">About</a>
-                </li>
-                    
-                </li>
-            </ul>
-        </div>
-
-
-        
     </nav>
