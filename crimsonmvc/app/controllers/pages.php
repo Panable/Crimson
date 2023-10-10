@@ -22,4 +22,11 @@ class pages extends controller
         $data = ['title' => 'About Us'];
         $this->view('pages/about', $data);
     }
+
+    //temporary function to access login page
+    public function login()
+    {
+        $data = ['title' => 'Login'];
+        $this->view('pages/login', $data);
+    }
 }

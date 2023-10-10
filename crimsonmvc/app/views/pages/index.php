@@ -9,5 +9,8 @@
 <br>
 <a href="<?php echo URLROOT?>pages/about">About us</a>
 <br>
+<a href="<?php echo URLROOT?>pages/login">Login</a>
+
+
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
