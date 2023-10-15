@@ -39,6 +39,16 @@ class user extends controller
             if ($this->hasCredentialErrors($data)) {
                 $this->view('user/login', $data);
             }
+
+            if ($this->postModel->login($data['email'], $data['password']))
+            {
+                die('Logged in!');
+            }
+            else
+            {
+                $data['password_err'] = 'Incorrect Credentials';
+                $this->view('user/login', $data);
+            }
         }
         $this->view('user/login');
     }
