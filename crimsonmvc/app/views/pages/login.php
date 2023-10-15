@@ -15,7 +15,7 @@
             <!-- Email Address -->
             <div class="form-outline my-5">
                 <label class="form-label">Email address</label>
-                <input type="password" class="form-control form-control-lg material-symbols-outlined pl-5" placeholder="mail"/>
+                <input type="email" class="form-control form-control-lg material-symbols-outlined pl-5" placeholder="mail"/>
             </div>
 
 
@@ -25,6 +25,7 @@
                 <input type="password" class="form-control form-control-lg material-symbols-outlined pl-5" placeholder="lock"/>
             </div>
 
+            <!-- Login Button -->
             <div class="pt-1 mb-4">
               <button type="button" class="btn btn-lg btn-dark rounded-pill">Log in</button>
             </div>
