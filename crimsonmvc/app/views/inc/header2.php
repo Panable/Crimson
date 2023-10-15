@@ -13,7 +13,7 @@
             <div class="col-sm">
                 <a href="<?php echo URLROOT; ?>">
                     <span class="material-symbols-outlined pl-5"> arrow_back </span>
-                    <span>Back1</span>
+                    <span>Back</span>
                 </a>
             </div>
 
