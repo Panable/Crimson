@@ -1,7 +1,6 @@
 <?php
 class menu extends controller
 {
-    private $postModel;
     public function __construct()
     {
         $this->postModel = $this->model('menumodel');

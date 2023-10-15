@@ -75,11 +75,11 @@ VALUES
 
 INSERT INTO Employees (ID, Name, Email, Position, Password)
 VALUES
-    (1, 'John Smith', 'john.smith@email.com', 'Manager', 'Password123'),
-    (2, 'Jane Doe', 'jane.doe@email.com', 'Employee', 'SecurePass'),
-    (3, 'Alice Brown', 'alice.brown@email.com', 'Employee', '12345'),
-    (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', 'SecretPass'),
-    (5, 'Sarah White', 'sarah.white@email.com', 'Employee', 'Pass123');
+    (1, 'John Smith', 'john.smith@email.com', 'Manager', '$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'),
+    (2, 'Jane Doe', 'jane.doe@email.com', 'Employee','$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'), 
+    (3, 'Alice Brown', 'alice.brown@email.com', 'Employee','$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'), 
+    (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', '$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'),
+    (5, 'Sarah White', 'sarah.white@email.com', 'Employee', '$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26');
 
 INSERT INTO menu (name, price, description, photo)
 VALUES

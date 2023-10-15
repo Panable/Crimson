@@ -5,6 +5,7 @@
  */
 class controller
 {
+    protected $postModel;
     public function model($model)
     {
         require_once '../app/models/' . $model . '.php';

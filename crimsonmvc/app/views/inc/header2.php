@@ -11,9 +11,9 @@
     <nav class="navbar navbar-expand-lg py-lg-4 custom-nav">
         <div class="container-fluid">
             <div class="col-sm">
-                <a href="nav-link" href="<?php echo URLROOT; ?> pages/">
+                <a href="<?php echo URLROOT; ?>">
                     <span class="material-symbols-outlined pl-5"> arrow_back </span>
-                    <span>Back</span>
+                    <span>Back1</span>
                 </a>
             </div>
 
