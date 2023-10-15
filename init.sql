@@ -1,12 +1,8 @@
-Drop Table if exists menu
-Drop Table if exists Employees
-Drop Table if exists OnlineBookings
-Drop Table if exists Orders
-Drop Table if exists OrderItems
-
-CREATE DATABASE MenuTable;
-USE MenuTable;
-
+Drop Table if exists menu;
+Drop Table if exists Employees;
+Drop Table if exists OnlineBookings;
+Drop Table if exists Orders;
+Drop Table if exists OrderItems;
 
 CREATE TABLE menu (
     ID INT PRIMARY KEY,
@@ -21,17 +17,17 @@ CREATE TABLE Employees (
     Name NVARCHAR(100),
     Email NVARCHAR(100),
     Position NVARCHAR(50),
-    Password NVARCHAR(25)
+    Password NVARCHAR(255)
 );
 
 CREATE TABLE OnlineBookings (
-    Phone_Number INT PRIMARY KEY,
+    Phone_Number NVARCHAR(255) PRIMARY KEY,
     Time TIME,
     Date DATE,
     Guests INT
 );
 
-REATE TABLE Orders (
+CREATE TABLE Orders (
     OrderID INT PRIMARY KEY,
     TableNumber INT
 );
@@ -71,11 +67,11 @@ VALUES
 
 INSERT INTO OnlineBookings (Phone_Number, Time, Date, Guests)
 VALUES
-    (1234567890, '09:00:00', '2023-08-28', 2),
-    (9876543210, '14:30:00', '2023-08-29', 4),
-    (5555555555, '18:45:00', '2023-08-30', 6),
-    (7777777777, '12:15:00', '2023-08-31', 3),
-    (8888888888, '20:00:00', '2023-09-01', 5);
+    ('1234567890', '09:00:00', '2023-08-28', 2),
+    ('9876543210', '14:30:00', '2023-08-29', 4),
+    ('5555555555', '18:45:00', '2023-08-30', 6),
+    ('7777777777', '12:15:00', '2023-08-31', 3),
+    ('8888888888', '20:00:00', '2023-09-01', 5);
 
 INSERT INTO Employees (ID, Name, Email, Position, Password)
 VALUES
