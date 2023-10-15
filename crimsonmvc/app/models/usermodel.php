@@ -4,6 +4,9 @@ class usermodel extends model
 {
     public function login($email, $password)
     {
+        if (!$this->findUserByEmail($email))
+            return false;
+
         $this->db->query('SELECT * FROM Employees WHERE Email = :email');
         $this->db->bind(':email', $email);
 

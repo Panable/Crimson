@@ -23,5 +23,10 @@
                 <a class="p-2 text-white">Menu</a>
                 <a class="p-2 text-white">"Profile Login"</a>
                 <a class="p-2 text-white">Staff Login</a>
+                <?php if (getSession('user_id')) {
+                    echo "hi";
+                    echo '<a class="p-2 text-white">logged in as - ' . getSession('user_name') . '</a>';
+                    echo getSession('user_name');
+                } ?>
             </div>
     </nav>
