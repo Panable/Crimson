@@ -5,15 +5,15 @@ Drop Table if exists Orders;
 Drop Table if exists OrderItems;
 
 CREATE TABLE menu (
-    ID INT PRIMARY KEY,
-    Name NVARCHAR(50),
-    Price DECIMAL(10, 2), 
-    Description NVARCHAR(255),
-    Photo NVARCHAR(255)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description TEXT,
+    photo VARCHAR(255)
 );
 
 CREATE TABLE Employees (
-    ID INT PRIMARY KEY,
+    ID INT PRIMARY KEY AUTO_INCREMENT,
     Name NVARCHAR(100),
     Email NVARCHAR(100),
     Position NVARCHAR(50),
@@ -28,7 +28,7 @@ CREATE TABLE OnlineBookings (
 );
 
 CREATE TABLE Orders (
-    OrderID INT PRIMARY KEY,
+    OrderID INT PRIMARY KEY AUTO_INCREMENT,
     TableNumber INT
 );
 
@@ -81,28 +81,28 @@ VALUES
     (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', 'SecretPass'),
     (5, 'Sarah White', 'sarah.white@email.com', 'Employee', 'Pass123');
 
-INSERT INTO menu (ID, Name, Price, Description, Photo)
+INSERT INTO menu (name, price, description, photo)
 VALUES
-    (1, 'Cappuccino', 4.99, 'A classic Italian coffee', 'images/cappuccino.jpg'),
-    (2, 'Espresso', 3.49, 'Strong and concentrated', 'images/espresso.jpg'),
-    (3, 'Latte', 5.49, 'Creamy and mild', 'images/latte.jpg'),
-    (4, 'Americano', 4.29, 'Diluted espresso', 'images/americano.jpg'),
-    (5, 'Mocha', 5.99, 'Coffee and chocolate', 'images/mocha.jpg'),
-    (6, 'Macchiato', 4.79, 'Espresso with a dash of milk', 'images/macchiato.jpg'),
-    (7, 'Caffè Ristretto', 4.79, 'Short and strong espresso', 'images/ristretto.jpg'),
-    (8, 'Iced Coffee', 4.99, 'Chilled coffee with ice', 'images/iced_coffee.jpg'),
-    (9, 'Hot Chocolate', 4.99, 'Rich and chocolaty', 'images/hot_chocolate.jpg'),
-    (10, 'Green Tea Latte', 4.49, 'Matcha and steamed milk', 'images/green_tea_latte.jpg'),
-    (11, 'Chai Latte', 4.49, 'Spiced tea with milk', 'images/chai_latte.jpg'),
-    (12, 'Caramel Macchiato', 5.49, 'Caramel, espresso, and milk', 'images/caramel_macchiato.jpg'),
-    (13, 'Tea', 3.99, 'Assorted tea flavors', 'images/tea.jpg'),
-    (14, 'Lemonade', 3.99, 'Refreshing lemon drink', 'images/lemonade.jpg'),
-    (15, 'Orange Juice', 3.49, 'Freshly squeezed', 'images/orange_juice.jpg'),
-    (16, 'Cheeseburger', 7.99, 'Classic beef burger with cheese', 'images/cheeseburger.jpg'),
-    (17, 'Veggie Wrap', 6.49, 'Grilled vegetables in a wrap', 'images/veggie_wrap.jpg'),
-    (18, 'Caesar Salad', 8.99, 'Romaine lettuce, croutons, and Caesar dressing', 'images/caesar_salad.jpg'),
-    (19, 'Margherita Pizza', 10.99, 'Tomato, mozzarella, and basil on thin crust', 'images/margherita_pizza.jpg'),
-    (20, 'Spaghetti Bolognese', 9.49, 'Spaghetti with meat sauce', 'images/spaghetti_bolognese.jpg'),
-    (21, 'Sushi Platter', 14.99, 'Assorted sushi rolls', 'images/sushi_platter.jpg'),
-    (22, 'Chicken Tenders', 6.99, 'Breaded chicken tenders', 'images/chicken_tenders.jpg'),
-    (23, 'French Fries', 3.99, 'Crispy golden fries', 'images/french_fries.jpg');
+    ('Cappuccino', 4.99, 'A classic Italian coffee', 'images/cappuccino.jpg'),
+    ('Espresso', 3.49, 'Strong and concentrated', 'images/espresso.jpg'),
+    ('Latte', 5.49, 'Creamy and mild', 'images/latte.jpg'),
+    ('Americano', 4.29, 'Diluted espresso', 'images/americano.jpg'),
+    ('Mocha', 5.99, 'Coffee and chocolate', 'images/mocha.jpg'),
+    ('Macchiato', 4.79, 'Espresso with a dash of milk', 'images/macchiato.jpg'),
+    ('Caffè Ristretto', 4.79, 'Short and strong espresso', 'images/ristretto.jpg'),
+    ('Iced Coffee', 4.99, 'Chilled coffee with ice', 'images/iced_coffee.jpg'),
+    ('Hot Chocolate', 4.99, 'Rich and chocolaty', 'images/hot_chocolate.jpg'),
+    ('Green Tea Latte', 4.49, 'Matcha and steamed milk', 'images/green_tea_latte.jpg'),
+    ('Chai Latte', 4.49, 'Spiced tea with milk', 'images/chai_latte.jpg'),
+    ('Caramel Macchiato', 5.49, 'Caramel, espresso, and milk', 'images/caramel_macchiato.jpg'),
+    ('Tea', 3.99, 'Assorted tea flavors', 'images/tea.jpg'),
+    ('Lemonade', 3.99, 'Refreshing lemon drink', 'images/lemonade.jpg'),
+    ('Orange Juice', 3.49, 'Freshly squeezed', 'images/orange_juice.jpg'),
+    ('Cheeseburger', 7.99, 'Classic beef burger with cheese', 'images/cheeseburger.jpg'),
+    ('Veggie Wrap', 6.49, 'Grilled vegetables in a wrap', 'images/veggie_wrap.jpg'),
+    ('Caesar Salad', 8.99, 'Romaine lettuce, croutons, and Caesar dressing', 'images/caesar_salad.jpg'),
+    ('Margherita Pizza', 10.99, 'Tomato, mozzarella, and basil on thin crust', 'images/margherita_pizza.jpg'),
+    ('Spaghetti Bolognese', 9.49, 'Spaghetti with meat sauce', 'images/spaghetti_bolognese.jpg'),
+    ('Sushi Platter', 14.99, 'Assorted sushi rolls', 'images/sushi_platter.jpg'),
+    ('Chicken Tenders', 6.99, 'Breaded chicken tenders', 'images/chicken_tenders.jpg'),
+    ('French Fries', 3.99, 'Crispy golden fries', 'images/french_fries.jpg');

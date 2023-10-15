@@ -26,4 +26,14 @@ class menu extends controller
         ];
         $this->view('menu/pickup', $data);
     }
+
+    public function admin()
+    {
+        $menu = $this->postModel->getMenu();
+        $data = [
+            'title' => 'Menu: ',
+            'menu' => $menu
+        ];
+        $this->view('menu/admin', $data);
+    }
 }
