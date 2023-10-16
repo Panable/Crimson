@@ -15,8 +15,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Description</th>
-                <th scope="col">Seasonal/Category</th> <!--This isn't required at the moment or optional feature -->
-                <th scope="col"> <MoreHorizIcon> </th> <!-- not working -->
+                <th scope="col"> <span class="material-symbols-outlined"> more_horiz </span> </th>
             </tr>
     </thead>
         <tbody>
@@ -29,8 +28,11 @@
                     $table .= '<td>' . $item->name . '</td>';
                     $table .= '<td>' . "$" . $item->price . '</td>';
                     $table .= '<td>' . $item->description . '</td>';
-                    //Add Edit Icon
-                    //Add Delete Icon
+                    //Add Edit Icon + add functionality
+                    $table .= '<td><a href="#"> <span class="material-symbols-outlined">edit</span></a></td>';
+                    $table .= '<td><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>';
+
+                    //Add Delete Icon + add functionality
                     $table .= '</tr>';
 
 
