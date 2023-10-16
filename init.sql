@@ -89,7 +89,7 @@ VALUES
     ('Americano', 4.29, 'Diluted espresso', 'images/americano.jpg'),
     ('Mocha', 5.99, 'Coffee and chocolate', 'images/mocha.jpg'),
     ('Macchiato', 4.79, 'Espresso with a dash of milk', 'images/macchiato.jpg'),
-    ('Caffè Ristretto', 4.79, 'Short and strong espresso', 'images/ristretto.jpg'),
+    ('Caffe Ristretto', 4.79, 'Short and strong espresso', 'images/ristretto.jpg'),
     ('Iced Coffee', 4.99, 'Chilled coffee with ice', 'images/iced_coffee.jpg'),
     ('Hot Chocolate', 4.99, 'Rich and chocolaty', 'images/hot_chocolate.jpg'),
     ('Green Tea Latte', 4.49, 'Matcha and steamed milk', 'images/green_tea_latte.jpg'),

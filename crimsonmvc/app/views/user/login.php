@@ -9,13 +9,15 @@
 
                     <form action="<?php echo URLROOT; ?>user/login" method="post" style="width: 23rem;">
 
-                        <h2 class="fw-normal mb-3 pb-3 text-center">Log in</h3>
+                        <h2 class="fw-normal mb-3 pb-3 text-center">Log in</h2>
 
 
                             <!-- Email Address -->
                             <div class="form-outline my-5">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" name="email" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="mail" />
+                                <label>
+                                    <input type="email" name="email" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="mail" />
+                                </label>
                                 <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
                             </div>
 
@@ -23,7 +25,9 @@
                             <!-- Password input -->
                             <div class="form-outline my-5">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="lock" />
+                                <label>
+                                    <input type="password" name="password" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="lock" />
+                                </label>
                                 <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
                             </div>
 
