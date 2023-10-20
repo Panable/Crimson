@@ -1,38 +1,34 @@
-Drop Table if exists menu
-Drop Table if exists Employees
-Drop Table if exists OnlineBookings
-Drop Table if exists Orders
-Drop Table if exists OrderItems
-
-CREATE DATABASE MenuTable;
-USE MenuTable;
-
+Drop Table if exists menu;
+Drop Table if exists Employees;
+Drop Table if exists OnlineBookings;
+Drop Table if exists Orders;
+Drop Table if exists OrderItems;
 
 CREATE TABLE menu (
-    ID INT PRIMARY KEY,
-    Name NVARCHAR(50),
-    Price DECIMAL(10, 2), 
-    Description NVARCHAR(255),
-    Photo NVARCHAR(255)
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description TEXT,
+    photo VARCHAR(255)
 );
 
 CREATE TABLE Employees (
-    ID INT PRIMARY KEY,
+    ID INT PRIMARY KEY AUTO_INCREMENT,
     Name NVARCHAR(100),
     Email NVARCHAR(100),
     Position NVARCHAR(50),
-    Password NVARCHAR(25)
+    Password NVARCHAR(255)
 );
 
 CREATE TABLE OnlineBookings (
-    Phone_Number INT PRIMARY KEY,
+    Phone_Number NVARCHAR(255) PRIMARY KEY,
     Time TIME,
     Date DATE,
     Guests INT
 );
 
-REATE TABLE Orders (
-    OrderID INT PRIMARY KEY,
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY AUTO_INCREMENT,
     TableNumber INT
 );
 
@@ -71,21 +67,21 @@ VALUES
 
 INSERT INTO OnlineBookings (Phone_Number, Time, Date, Guests)
 VALUES
-    (1234567890, '09:00:00', '2023-08-28', 2),
-    (9876543210, '14:30:00', '2023-08-29', 4),
-    (5555555555, '18:45:00', '2023-08-30', 6),
-    (7777777777, '12:15:00', '2023-08-31', 3),
-    (8888888888, '20:00:00', '2023-09-01', 5);
+    ('1234567890', '09:00:00', '2023-08-28', 2),
+    ('9876543210', '14:30:00', '2023-08-29', 4),
+    ('5555555555', '18:45:00', '2023-08-30', 6),
+    ('7777777777', '12:15:00', '2023-08-31', 3),
+    ('8888888888', '20:00:00', '2023-09-01', 5);
 
 INSERT INTO Employees (ID, Name, Email, Position, Password)
 VALUES
-    (1, 'John Smith', 'john.smith@email.com', 'Manager', 'Password123'),
-    (2, 'Jane Doe', 'jane.doe@email.com', 'Employee', 'SecurePass'),
-    (3, 'Alice Brown', 'alice.brown@email.com', 'Employee', '12345'),
-    (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', 'SecretPass'),
-    (5, 'Sarah White', 'sarah.white@email.com', 'Employee', 'Pass123');
+    (1, 'John Smith', 'john.smith@email.com', 'Manager', '$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'),
+    (2, 'Jane Doe', 'jane.doe@email.com', 'Employee','$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'), 
+    (3, 'Alice Brown', 'alice.brown@email.com', 'Employee','$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'), 
+    (4, 'Bob Johnson', 'bob.johnson@email.com', 'Manager', '$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26'),
+    (5, 'Sarah White', 'sarah.white@email.com', 'Employee', '$2y$10$1OAFWaT4q15YZis.b380KukWaMTe/CBQZTcELNw6FkNS1yvCx6z26');
 
-INSERT INTO menu (ID, Name, Price, Description, Photo)
+INSERT INTO menu (name, price, description, photo)
 VALUES
     (1, 'Cappuccino', 4.99, 'A classic Italian coffee', 'Cappuccino.jpg'),
     (2, 'Espresso', 3.49, 'Strong and concentrated', 'Espresso.jpg'),

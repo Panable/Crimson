@@ -1,13 +1,6 @@
 <?php
-class menumodel
+class menumodel extends model
 {
-    private $db;
-
-    public function __construct()
-    {
-        $this->db = new database;
-    }
-
     public function getMenu()
     {
         $this->db->query("SELECT * FROM menu");

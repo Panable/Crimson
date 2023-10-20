@@ -9,7 +9,7 @@
 <br>
 <a href="<?php echo URLROOT?>pages/about">About us</a>
 <br>
-<a href="<?php echo URLROOT?>pages/login">Login</a>
+<a href="<?php echo URLROOT?>user/login">Login</a>
 
 
 
