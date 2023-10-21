@@ -13,10 +13,12 @@
 
 
                             <!-- Email Address -->
+                            <!-- difference between form-outline and form-group -->
                             <div class="form-outline my-5">
                                 <label for="email" class="form-label">Email address</label>
                                 <label>
-                                    <input type="email" name="email" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="mail" />
+
+                                    <input type="email" name="email" class="form-control form-control-lg pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" />
                                 </label>
                                 <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
                             </div>
@@ -26,6 +28,7 @@
                             <div class="form-outline my-5">
                                 <label for="password" class="form-label">Password</label>
                                 <label>
+
                                     <input type="password" name="password" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="lock" />
                                 </label>
                                 <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>

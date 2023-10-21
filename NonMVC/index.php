@@ -68,10 +68,3 @@
 
 </html>
 
-<!--
-TODO
-Card Container should have shadow
-Image Container
-Text should have a container
-Item name and price
--->

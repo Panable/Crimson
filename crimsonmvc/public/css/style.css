@@ -55,3 +55,4 @@ table > tbody > tr:nth-child(even), thead {
 table > tbody > tr:nth-child(odd) {
     background-color: var(--table-bg-dark);
 }
+

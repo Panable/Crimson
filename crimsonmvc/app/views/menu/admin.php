@@ -28,11 +28,13 @@
                     $table .= '<td>' . $item->name . '</td>';
                     $table .= '<td>' . "$" . $item->price . '</td>';
                     $table .= '<td>' . $item->description . '</td>';
-                    //Add Edit Icon + add functionality
+                    /*
+                       Add Edit Icon + add functionality
+                       Add link to correspond with selected
+                    */
                     $table .= '<td><a href="#"> <span class="material-symbols-outlined">edit</span></a></td>';
                     $table .= '<td><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>';
 
-                    //Add Delete Icon + add functionality
                     $table .= '</tr>';
 
 
