@@ -36,9 +36,6 @@
                     $table .= '<td><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>';
 
                     $table .= '</tr>';
-
-
-
                 }
 
                 echo $table;
