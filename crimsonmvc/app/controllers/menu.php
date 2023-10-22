@@ -35,4 +35,17 @@ class menu extends controller
         ];
         $this->view('menu/admin', $data);
     }
+
+    // Added edit page to be viewable through localhost/crimsonmvc/menu/edit
+    public function edit()
+    {
+        $menu = $this->postModel->getMenu();
+        $data = [
+            'title' => 'Menu: ',
+            'menu' => $menu
+        ];
+        $this->view('menu/edit', $data);
+    }
+
+
 }

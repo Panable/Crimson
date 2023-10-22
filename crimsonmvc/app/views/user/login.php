@@ -11,33 +11,31 @@
 
                         <h2 class="fw-normal mb-3 pb-3 text-center">Log in</h2>
 
-
-                            <!-- Email Address -->
-                            <!-- difference between form-outline and form-group -->
-                            <div class="form-outline my-5">
-                                <label for="email" class="form-label">Email address</label>
-                                <label>
-
-                                    <input type="email" name="email" class="form-control form-control-lg pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" />
-                                </label>
-                                <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
-                            </div>
+                        <!-- Email input -->
+                        <div class="form-outline my-5">
+                            <label for="email" class="form-label">Email address</label>
+                            <label>
+                                <span class="material-symbols-outlined"> mail </span>
+                                <input type="email" name="email" class="form-control form-control-lg pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="joedoe123@gmail.com"/>
+                            </label>
+                            <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
+                        </div>
 
 
-                            <!-- Password input -->
-                            <div class="form-outline my-5">
-                                <label for="password" class="form-label">Password</label>
-                                <label>
+                        <!-- Password input -->
+                        <div class="form-outline my-5">
+                            <label for="password" class="form-label">Password</label>
+                            <label>
 
-                                    <input type="password" name="password" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="lock" />
-                                </label>
-                                <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
-                            </div>
+                                <input type="password" name="password" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="lock" />
+                            </label>
+                            <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
+                        </div>
 
-                            <!-- Login Button -->
-                            <div class="pt-1 mb-4">
-                                <input type="submit" value="Login" class="btn btn-success btn-block">
-                            </div>
+                        <!-- Login Button -->
+                        <div class="pt-1 mb-4">
+                            <input type="submit" value="Login" class="btn btn-success btn-block">
+                        </div>
 
                     </form>
                 </div>

@@ -9,38 +9,36 @@
 
     <table class="table">
         <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Description</th>
-                <th scope="col"> <span class="material-symbols-outlined"> more_horiz </span> </th>
-            </tr>
-    </thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">
+                <span class="material-symbols-outlined"> more_horiz </span>
+            </th>
+        </tr>
+        </thead>
         <tbody>
-            <tr>
-                <?php
-                $table = '';
-                foreach ($data['menu'] as $item) {
-                    $table .= '<td>' . $item->id . '</td>';
-                    $table .= '<td>' . $item->photo . '</td>'; //Please fix photo later loading, template not in admin menu page.
-                    $table .= '<td>' . $item->name . '</td>';
-                    $table .= '<td>' . "$" . $item->price . '</td>';
-                    $table .= '<td>' . $item->description . '</td>';
-                    /*
-                       Add Edit Icon + add functionality
-                       Add link to correspond with selected
-                    */
-                    $table .= '<td><a href="#"> <span class="material-symbols-outlined">edit</span></a></td>';
-                    $table .= '<td><a href="#"> <span class="material-symbols-outlined">delete</span></a></td>';
+        <?php
+        $table = '';
+        foreach ($data['menu'] as $item) {
+            $table .= '<tr>';
+            $table .= '<td>' . $item->id . '</td>';
+            $table .= '<td>' . $item->photo . '</td>'; //Image Broken at the moment
+            $table .= '<td>' . $item->name . '</td>';
+            $table .= '<td>' . "$" . $item->price . '</td>';
+            $table .= '<td>' . $item->description . '</td>';
+            $table .= '<td>';
+            $table .= '<a href="#" class="material-symbols-outlined text-decoration-none">edit</span></a>';
+            $table .= '<a href="#" class="material-symbols-outlined text-decoration-none">delete</span></a>';
+            $table .= '</td>';
+            $table .= '</tr>';
+        }
 
-                    $table .= '</tr>';
-                }
-
-                echo $table;
-
-                ?>
+        echo $table;
+        ?>
         </tbody>
     </table>
 </section>

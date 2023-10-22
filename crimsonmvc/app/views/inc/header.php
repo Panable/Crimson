@@ -5,11 +5,8 @@
     <title><?php echo SITENAME; ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- I think bootstrap cdn link can be removed? although I could be potentially wrong-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="<?php echo URLROOT; ?>css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg py-lg-4 bg-dark">
         <div class="col-sm">
