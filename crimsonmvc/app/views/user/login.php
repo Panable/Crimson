@@ -5,19 +5,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6 text-black">
-                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                <div class="d-flex align-items-center ms-xl-6 mt-5 pt-5 justify-content-center">
 
                     <form action="<?php echo URLROOT; ?>user/login" method="post" style="width: 23rem;">
 
-                        <h2 class="fw-normal mb-3 pb-3 text-center">Log in</h2>
+                        <h2 class="fw-normal mb-3 pb-3 text-center fs-1">Log in</h2>
 
                         <!-- Email input -->
                         <div class="form-outline my-5">
-                            <label for="email" class="form-label">Email address</label>
-                            <label>
-                                <span class="material-symbols-outlined"> mail </span>
-                                <input type="email" name="email" class="form-control form-control-lg pl-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>" placeholder="joedoe123@gmail.com"/>
-                            </label>
+                            <label for="email" class="form-label fs-4 m-0">Email Address</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <!-- not working correctly icon section-->
+                                    <span class="input-group-text material-symbols-outlined position-absolute fs-2 col-12"> mail </span>
+                                </div>
+                                <input type="email" name="email" placeholder="Email" class="form-control form-control-lg rounded-5 border border-4 border-dark" <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>/>
+                            </div>
                             <span class="invalid-feedback"><?php echo $data['email_err']; ?></span>
                         </div>
 
@@ -25,16 +28,18 @@
                         <!-- Password input -->
                         <div class="form-outline my-5">
                             <label for="password" class="form-label">Password</label>
-                            <label>
-
-                                <input type="password" name="password" class="form-control form-control-lg material-symbols-outlined pl-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>" placeholder="lock" />
-                            </label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text material-symbols-outlined position-absolute fs-2 col-12"> lock </span>
+                                </div>
+                                <input type="password" name="password" placeholder="Password" class="form-control form-control-lg rounded-5 border border-4 border-dark <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>"/>
+                            </div>
                             <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
                         </div>
 
                         <!-- Login Button -->
-                        <div class="pt-1 mb-4">
-                            <input type="submit" value="Login" class="btn btn-success btn-block">
+                        <div class="pt-1 mb-4 ">
+                            <input type="submit" value="Login" id="loginBtn" class="rounded-pill form-control form-control-lg rounded-5 border border-4 border-dark">
                         </div>
 
                     </form>
