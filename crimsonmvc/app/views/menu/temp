@@ -1,0 +1,57 @@
+                    <!-- Score -->
+                    <div class="form-group d-block">
+                        <label for="score">Score</label>
+                        <input type="number" id="score" class="form-control" min="0" max="10" step="0.1" value="7.6">
+                    </div>
+                    <!-- Chapter Progress -->
+                    <div class="form-group d-block">
+                        <label for="chapter-progress">Chapter Progress</label>
+                        <input type="number" id="chapter-progress" class="form-control" min="0" max="232" value="232">
+                    </div>
+                    <!-- Volume Progress -->
+                    <div class="form-group d-block">
+                        <label for="volume-progress">Volume Progress</label>
+                        <input type="number" id="volume-progress" class="form-control" min="0" max="26" value="26">
+                    </div>
+                    <!-- Start Date -->
+                    <div class="form-group d-block">
+                        <label for="start-date">Start Date</label>
+                        <input type="text" id="start-date" class="form-control">
+                    </div>
+                    <!-- Finish Date -->
+                    <div class="form-group d-block">
+                        <label for="finish-date">Finish Date</label>
+                        <input type="text" id="finish-date" class="form-control">
+                    </div>
+                    <!-- Total Rereads -->
+                    <div class="form-group d-block">
+                        <label for="total-rereads">Total Rereads</label>
+                        <input type="number" id="total-rereads" class="form-control" min="0">
+                    </div>
+                    <!-- Notes -->
+                    <div class="form-group d-block">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" class="form-control" rows="3"></textarea>
+                    </div>
+                    <!-- Custom Lists -->
+                    <div class="form-group d-block">
+                        <label for="custom-lists">Custom Lists</label>
+                        <p class="form-control-static">No custom manga lists</p>
+                    </div>
+                    <!-- Private Checkbox -->
+                    <div class="form-group form-check d-block">
+                        <input type="checkbox" class="form-check-input" id="private">
+                        <label class="form-check-label" for="private">Private</label>
+                    </div>
+
+                                        <div class="form-group d-block">
+                                            <label for="status">Status</label>
+                                            <select id="status" class="form-control">
+                                                <option>Reading</option>
+                                                <option>Plan to read</option>
+                                                <option selected>Completed</option>
+                                                <option>Rereading</option>
+                                                <option>Paused</option>
+                                                <option>Dropped</option>
+                                            </select>
+                                        </div>

@@ -6,29 +6,31 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
+
 /* Material Symbols*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+
 
 
 /* Custom Colour */
 :root {
     --nav-background: #2B2929;
     --main-background: #F9F7F4;
-    
     --header1-text: #AB4B3B;
     --header2-text: #4F6B4D;
     --header3-text: #6F4E37;
-
     --light-text: #FFFFFF;
     --dark-text: #000000;
-
     --icon-color: #1C1B1F;
-
-    
     --table-bg-dark: #F7F9FC;
     --table-bg-light: #F0F1FA;
+    --edit-input: #EDF1F5;
+    --section-white: #FAFAFA;
+
 }
+
 
 /* Nav Bar */
 .custom-nav {
@@ -36,22 +38,40 @@
     color: var(--light-text);
 }
 
+
 /* Change the color of h1 tags to dark red */
 h1 {
     color: var(--header1-text);
-    font-family: 'Croissant One', cursive;    
-}
-
-h2 {
-    color: var(--dark-text);
     font-family: 'Croissant One', cursive;
 }
 
-button {
-    background-color: var(--nav-background);
+
+
+
+/* Login Page */
+#title {
+    color: var(--dark-text);
+    font-family: 'Croissant One', cursive;
+    font-size: 64px;
+}
+
+
+label#form-label {
+    font-family: 'DM Sans', serif;
+}
+
+input#email, input#password {
+    font-family: "Roboto", serif;
+    border-color: var(--nav-background) !important;
+}
+
+#loginBtn {
+    background-color: var(--nav-background) !important;
     color: var(--light-text);
     font-family: 'DM Sans', sans-serif;
 }
+
+
 
 
 /* Admin Menu Page Table Style */
@@ -59,13 +79,42 @@ th {
     font-family: 'DM Sans', sans-serif;
 }
 
+
 table > tbody > tr:nth-child(even), thead {
     background-color: var(--table-bg-light);
     font-family: 'Roboto', sans-serif;
 }
+
 
 table > tbody > tr:nth-child(odd), tr  {
     background-color: var(--table-bg-dark);
     font-family: 'Roboto', sans-serif;
 }
 
+
+
+/* CRUD Menu Page */
+#menu-input {
+    background-color: var(--edit-input);
+    font-family: "DM Sans", serif;
+}
+
+/* Sidebar */
+#sidebar-nav {
+    display: inline-block;
+}
+
+#item-image {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: var(--icon-color);
+}
+
+#content {
+    width: 100%;
+    background-color: var(--edit-input);
+}
+
+#edit-section {
+    background-color: var(--section-white);
+}
