@@ -118,3 +118,6 @@ table > tbody > tr:nth-child(odd), tr  {
 #edit-section {
     background-color: var(--section-white);
 }
+label#item-field {
+    font-family: "DM Sans", serif;
+}

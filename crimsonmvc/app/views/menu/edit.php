@@ -7,16 +7,20 @@
                 <div id="item-image" class="content bg-dark">
                     <div class="content d-flex flex-row align-items-end p-5 pb-0 position-relative z-index-10">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa0PHv0Qqh3jMHjenGgD9-yy9wACuWZXc7ww&usqp=CAU" alt="Mocha">
-                        <label> Mocha </label>
-                        <button type="button" class="btn btn-sm btn-primary ml-5"> Save</button>
+                        <label id="item-name" class="text-white fs-2 px-3"> Mocha </label>
+                        <!-- Save Button -->
+                        <button type="button" class="btn btn-sm btn-primary px-4 ms-auto mb-1"> Save</button>
                     </div>
                 </div>
             </div>
-            <div id="edit-section" class="row">
-                <div class="col-12 d-flex flex-row">
+        <!-- FORM TAG ACTION HERE-->
+        <form action="">
+            <div id="edit-section">
+                <div class="col-12 d-flex">
                     <!-- Form elements -->
+                    <!-- ID Form -->
                     <div class="form-group d-block m-5">
-                        <label for="score">ID</label>
+                        <label id="item-field" class="">ID</label>
                         <div id="item-input-wrapper">
                             <label for="item-input">
                                 <input type="number" id="item-input" class="form-control" readonly value="1">
@@ -24,35 +28,37 @@
                         </div>
                     </div>
 
-
+                    <!-- Menu Item Name-->
                     <div class="form-group d-block m-5">
-                        <label for="score">Name</label>
+                        <label id="item-field">Name</label>
                         <div id="item-input-wrapper">
                             <label for="item-input">
-                                <input type="text" id="item-input" class="form-control" value="mocha">
+                                <input type="text" id="item-input" class="form-control" value="Mocha">
                             </label>
                         </div>
                     </div>
 
+                    <!-- Menu Item Price -->
                     <div class="form-group d-block m-5">
-                        <label for="score">Price</label>
+                        <label id="item-field">Price</label>
                         <div id="item-input-wrapper">
-                            <label>
-                                <input type="number" min="1" step="any" class="form-control" value="$5.20">
+                            <label for="item-input">
+                                <input type="number" step="0.1" id="item-input" class="form-control" value="Mocha">
                             </label>
                         </div>
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="form-group d-block">
-                        <label for="notes">Description</label>
-                        <textarea id="notes" class="form-control" rows="1"></textarea>
-                    </div>
 
-                    <!-- Delete Button -->
+                <!-- Menu Item Description-->
+                <div class="col mx-5">
                     <div class="form-group d-block">
-                        <button type="button" class="btn btn-sm btn-danger">Delete</button>
+                        <label id="item-field">Description</label>
+                        <textarea id="notes" class="form-control" rows="3"></textarea>
+
+
+
+                        <button type="button" class="btn btn-sm btn-danger my-5 float-end">Delete</button>
                     </div>
                 </div>
             </div>
