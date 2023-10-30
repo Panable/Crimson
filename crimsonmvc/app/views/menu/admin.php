@@ -34,8 +34,8 @@
             $table .= '<td>' . "$" . $item->price . '</td>';
             $table .= '<td>' . $item->description . '</td>';
             $table .= '<td>';
-            $table .= '<a href="#" class="material-symbols-outlined text-decoration-none">edit</span></a>';
-            $table .= '<a href="#" class="material-symbols-outlined text-decoration-none">delete</span></a>';
+            $table .= '<a href="' . URLROOT . 'menu' . '/edit/' . $item->id . '" class="material-symbols-outlined text-decoration-none">edit</span></a>';
+            $table .= '<a href="' . URLROOT . 'menu' . '/delete/' . $item->id . '" class="material-symbols-outlined text-decoration-none">delete</span></a>';
             $table .= '</td>';
             $table .= '</tr>';
         }
