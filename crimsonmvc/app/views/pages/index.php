@@ -7,7 +7,7 @@
 <br>
 <a href="<?php echo URLROOT?>menu/pickup">Order Online</a>
 <br>
-<a href="<?php echo URLROOT?>user/login">Book Online</a>
+<a href="<?php echo URLROOT?>booking">Book Online</a>
 <br>
 <a href="<?php echo URLROOT?>pages/about">About us</a>
 <br>

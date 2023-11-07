@@ -21,7 +21,8 @@ CREATE TABLE Employees (
 );
 
 CREATE TABLE OnlineBookings (
-    Phone_Number NVARCHAR(255) PRIMARY KEY,
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Phone_Number NVARCHAR(255),
     Time TIME,
     Date DATE,
     Guests INT
