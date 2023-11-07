@@ -13,7 +13,11 @@ class pages extends controller
             'title' => 'Welcome',
             'menu' => $posts
         ];
-        $this->view('pages/index', $data);
+        if (isLoggedIn()) {
+            $this->view('pages/controlpanel', $data);
+        } else {
+            $this->view('pages/index', $data);
+        }
     }
 
     public function about()

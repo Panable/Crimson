@@ -14,7 +14,6 @@ class user extends controller
         return false;
     }
 
-
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -73,11 +72,13 @@ class user extends controller
 
     public function logout()
     {
-        unset($_SESSION['user_id']);
-        unset($_SESSION['user_email']);
-        unset($_SESSION['user_name']);
+        unsetSession('user_id');
+        unsetSession('user_email');
+        unsetSession('user_name');
+        unsetSession('user_position');
+
         session_destroy();
-        redirect('users/login');
+        redirect('pages/index');
     }
 
     public function isLoggedIn()

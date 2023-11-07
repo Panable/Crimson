@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?> <!-- header needs to be changed to size view-->
+<?php require APPROOT . '/views/inc/adminHeader.php'; ?> <!-- header needs to be changed to size view-->
 
 
 <h1>ADMIN MENU PAGE</h1>

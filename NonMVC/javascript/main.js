@@ -1,1 +1,1 @@
-console.log("javascript is kinda cringeeeeeeeeeeeeeeeeee");
+//console.log("javascript is kinda cringeeeeeeeeeeeeeeeeee");

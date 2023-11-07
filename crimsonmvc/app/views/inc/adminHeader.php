@@ -9,18 +9,24 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg py-lg-4 bg-dark">
         <div class="col-sm">
+
+<?php
+echo '<a class="p-2 text-white text-decoration-none">' . getSession('user_name') . '</a>';
+?>
+<?php echo URLROOT; ?>menu/
         </div>
 
         <div class="col-md">
-            <h1 class="text-white text-center">Crimson Cafe</h1>
+            <h1 class="text-white text-center"> Crimson Cafe</h1>
         </div>
         <!-- Right Side Navbar -->
         <div class="col-sm">
             <div class="container my-2-md-0 mr-md-3">
-                <a href=<?php echo URLROOT; ?>pages/index class="p-2 text-white">Home</a>
-                <a href=<?php echo URLROOT; ?>pages/about class="p-2 text-white">About</a>
-                <a href=<?php echo URLROOT; ?>user/login class="p-2 text-white">Login</a>
+                <a class="p-2 text-white">Control Panel</a>
+                <a href=<?php echo URLROOT; ?>user/logout class="p-2 text-white">Logout</a>
+
             </div>
     </nav>

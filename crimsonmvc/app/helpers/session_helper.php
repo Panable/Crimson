@@ -1,6 +1,16 @@
 <?php
 session_start();
 
+function isLoggedIn()
+{
+    return getSession('user_id');
+}
+
+function unsetSession($key)
+{
+    unset($_SESSION[$key]);
+}
+
 function setSession($key, $value)
 {
     $_SESSION[$key] = $value;
@@ -8,8 +18,7 @@ function setSession($key, $value)
 
 function getSession($key)
 {
-    if (empty($_SESSION[$key]))
-    {
+    if (empty($_SESSION[$key])) {
         return false;
     }
 
@@ -33,7 +42,7 @@ function flash($name = '', $message = '', $class = 'alert alert-success')
 function generateNewSession($name, $message, $class)
 {
     setSession($name, $message);
-    setSession($name. '_class', $class);
+    setSession($name . '_class', $class);
 }
 
 function flashMessageFromSessionAndUnset($name)
