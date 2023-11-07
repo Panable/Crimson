@@ -10,9 +10,5 @@
 <a href="<?php echo URLROOT?>booking">Book Online</a>
 <br>
 <a href="<?php echo URLROOT?>pages/about">About us</a>
-<br>
-<a href="<?php echo URLROOT?>user/login">Login</a>
-
-
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>
