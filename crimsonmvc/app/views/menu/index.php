@@ -13,6 +13,7 @@
             $description_source = $item->description;
             $name_source = $item->name;
             $price_source = $item->price;
+            $img_source = URLROOT . $item->photo;
             $itemCard = buildItem($img_source, $name_source, $price_source, $description_source);
             echo $itemCard;
         }

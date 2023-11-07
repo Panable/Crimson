@@ -12,37 +12,45 @@
 
     <table class="table">
         <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Image</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Description</th>
-            <th scope="col">
-                <span class="material-symbols-outlined"> more_horiz </span>
-            </th>
-        </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">
+                    <span class="material-symbols-outlined"> more_horiz </span>
+                </th>
+            </tr>
+
         </thead>
         <tbody>
-        <?php
-        $table = '';
-        foreach ($data['menu'] as $item) {
-            $table .= '<tr>';
-            $table .= '<td>' . $item->id . '</td>';
-            $table .= '<td>' . $item->photo . '</td>'; //Image Broken at the moment
-            $table .= '<td>' . $item->name . '</td>';
-            $table .= '<td>' . "$" . $item->price . '</td>';
-            $table .= '<td>' . $item->description . '</td>';
-            $table .= '<td>';
-            $table .= '<a href="' . URLROOT . 'menu' . '/edit/' . $item->id . '" class="material-symbols-outlined text-decoration-none">edit</span></a>';
-            $table .= '<a href="' . URLROOT . 'menu' . '/delete/' . $item->id . '" class="material-symbols-outlined text-decoration-none">delete</span></a>';
-            $table .= '</td>';
-            $table .= '</tr>';
-        }
+            <?php
+            $table = '';
+            foreach ($data['menu'] as $item) {
+
+                $img_source = URLROOT . $item->photo;
+
+                if (!@GetImageSize($img_source)) {
+                    $img_source = 'https://wiki.teamfortress.com/w/images/f/f4/Backpack_Sandvich.png';
+                }
+
+                $table .= '<tr>';
+                $table .= '<td>' . $item->id . '</td>';
+                $table .= '<td><img src="' . $img_source . '"></td>';
+                $table .= '<td>' . $item->name . '</td>';
+                $table .= '<td>' . "$" . $item->price . '</td>';
+                $table .= '<td>' . $item->description . '</td>';
+                $table .= '<td>';
+                $table .= '<a href="' . URLROOT . 'menu' . '/edit/' . $item->id . '" class="material-symbols-outlined text-decoration-none">edit</span></a>';
+                $table .= '<a href="' . URLROOT . 'menu' . '/delete/' . $item->id . '" class="material-symbols-outlined text-decoration-none">delete</span></a>';
+                $table .= '</td>';
+                $table .= '</tr>';
+            }
 
 
-        echo $table;
-        ?>
+            echo $table;
+            ?>
         </tbody>
     </table>
     <!-- Switching Pages Finished! perhaps make a border round it

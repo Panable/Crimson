@@ -11,7 +11,6 @@
                 </div>
             </div>
         </div>
-        <?php echo URLROOT ?>
         <!-- FORM TAG ACTION HERE-->
         <form action="<?php echo URLROOT; ?>menu/edit/<?php echo $data['menu']->id; ?>" method="post">
             <div id="edit-section">
