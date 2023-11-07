@@ -1,11 +1,8 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <h1>
-    <?php echo $data['title']; ?>
+    BOOK YOUR TABLE
 </h1>
-<ul>
-<?php foreach ($data['menu'] as $item): ?>
 
-    <li><?php echo $item->name; ?></li>
-<?php endforeach; ?>
-</ul>
+James put the shit in here
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>

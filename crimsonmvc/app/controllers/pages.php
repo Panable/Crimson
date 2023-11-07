@@ -26,13 +26,6 @@ class pages extends controller
         $this->view('pages/about', $data);
     }
 
-    //temporary function to access login page
-    public function login()
-    {
-        $data = ['title' => 'Login'];
-        $this->view('pages/login', $data);
-    }
-
     public function status()
     {
         $this->view('pages/status');
