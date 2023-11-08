@@ -1,4 +1,5 @@
 <?php
+
 function buildItem($img_source, $name_source, $price_source, $description_source)
 {
     if (!@GetImageSize($img_source)) {

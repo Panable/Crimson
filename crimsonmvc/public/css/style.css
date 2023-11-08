@@ -45,7 +45,10 @@ h1 {
     font-family: 'Croissant One', cursive;
 }
 
-
+img {
+  width: auto;
+  height: 200px;
+}
 
 
 /* Login Page */

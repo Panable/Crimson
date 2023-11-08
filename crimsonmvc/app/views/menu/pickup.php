@@ -1,8 +1,27 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
-<h1>
-    BOOK YOUR TABLE
-</h1>
+<?php require APPROOT . '/views/inc/template.php'; ?>
 
-James put the shit in here
+<section class="card-section pt-4 mx-4">
+    <div class="my-5 mx-3">
+        <h2> Menu </h2>
+    </div>
+    <div class="my-5 mx-3">
+    </div>
+    <div class="row">
+        <?php
+        foreach ($data['menu'] as $item) {
+            $description_source = $item->description;
+            $name_source = $item->name;
+            $price_source = $item->price;
+            $img_source = URLROOT . $item->photo;
+            $itemCard = buildItem($img_source, $name_source, $price_source, $description_source);
+            echo $itemCard;
+        }
+        ?>
+    </div>
+</section>
 
+<div class="input-group quantity-selector">
+  <input type="number" id="inputQuantitySelector" class="form-control" value="0" min="0" max="100" step="1">
+</div>
 <?php require APPROOT . '/views/inc/footer.php'; ?>
