@@ -135,12 +135,27 @@ class menu extends controller
 
     public function pickup()
     {
-        $menu = $this->postModel->getMenu();
-        $data = [
-            'title' => 'Online Ordering:',
-            'menu' => $menu
-        ];
-        $this->view('menu/pickup', $data);
+        try {
+            // Sanitize $_POST data
+            //FILTER_SANITIZE_FULL_SPECIAL_CHARS
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                setSession('UserCart', $_POST);
+                redirect('order/usercheckout');
+
+            } else {
+                $menu = $this->postModel->getMenu();
+                $data = [
+                    'title' => 'Online Ordering:',
+                    'menu' => $menu
+                ];
+                $this->view('menu/pickup', $data);
+            }
+        } catch (Exception $e) {
+            $_SESSION['statusHeader'] = "ERROR";
+            $_SESSION['statusMsg'] = "Error Booking Table: " . $e->getMessage();
+            redirect('pages/status');
+        }
     }
 
     public function admin()
@@ -221,7 +236,7 @@ class menu extends controller
             $table = $this->postModel->readTable('menu');
 
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                    echo json_encode($table);
+                echo json_encode($table);
             }
         } catch (Exception $e) {
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {

@@ -18,4 +18,4 @@ fi
 table_name="$1"
 
 # Execute SQL query to select all rows from the specified table
-docker exec -i ${service_name} mysql -u${username} -p${password} ${database} -e "SELECT * FROM ${table_name};"
+docker exec -i ${service_name} mysql -u${username} -p${password} ${database} -e "SELECT id, name, price FROM menu WHERE id IN (2,3)"
