@@ -27,6 +27,7 @@ class booking extends controller
 
             $this->postModel->insertBooking($table_data);
             $_SESSION['statusHeader'] = "SUCCESS";
+            $_SESSION['statusMsg'] = "Your table has been successfully booked";
             redirect('pages/status');
         } catch (Exception $e) {
             $_SESSION['statusHeader'] = "ERROR";

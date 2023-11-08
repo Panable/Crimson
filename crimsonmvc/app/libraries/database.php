@@ -25,6 +25,11 @@ class database
         }
     }
 
+    public function getLastInsertID()
+    {
+        $this->dbh->lastInsertId();    
+    }
+
     public function query($sql)
     {
         $this->stmt = $this->dbh->prepare($sql);

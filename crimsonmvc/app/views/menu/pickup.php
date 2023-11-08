@@ -11,13 +11,24 @@
         <button type="submit" class="btn btn-primary">Checkout</button>
         <div class="row">
             <?php
+            function value($id)
+            {
+                $cart = getSession('UserCart');
+                if ($cart) {
+                    if (isset($cart[$id])) {
+                       return $cart[$id];  
+                    }
+                }
+
+                return 0;
+            }
             foreach ($data['menu'] as $item) {
                 $description_source = $item->description;
                 $name_source = $item->name;
                 $price_source = $item->price;
                 $img_source = URLROOT . $item->photo;
                 $quantityHtml = '<div class="input-group quantity-selector">
-  <input type="number" name="' . $item->id . '"id="inputQuantitySelector" class="form-control" value="0" min="0" max="100" step="1">
+  <input type="number" name="' . $item->id . '"id="inputQuantitySelector" class="form-control" value="'. value($item->id) . '" min="0" max="100" step="1">
 </div>';
                 $itemCard = buildItemWithQuantity($quantityHtml, $img_source, $name_source, $price_source, $description_source);
                 echo $itemCard;

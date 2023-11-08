@@ -32,8 +32,8 @@ CREATE TABLE OnlineBookings (
 CREATE TABLE OnlineOrders (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Name NVARCHAR(100),
-    Email NVARCHAR(100),
-    OrderItemID INT
+    Phone_Number NVARCHAR(255),
+    OrderID INT
 );
 
 CREATE TABLE Orders (
@@ -44,7 +44,8 @@ CREATE TABLE Orders (
 CREATE TABLE OrderItems (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     OrderID INT,
-    ItemID INT
+    ItemID INT,
+    Quantity INT
 );
 
 

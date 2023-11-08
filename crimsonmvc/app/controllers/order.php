@@ -21,11 +21,15 @@ class order extends controller
             else
                 $ids = $ids . ',' . $key;
         }
+
+        if (empty($ids))
+            redirect('menu/pickup');
+
         $raw_table_data = $this->postModel->getNamePrice($ids);
 
         foreach ($raw_table_data as $item) {
             $item->quantity = $raw_data[$item->id];
-            $item->total = round((double) $item->quantity * (double) $item->price, 2);
+            $item->total = round((float) $item->quantity * (float) $item->price, 2);
             $total += $item->total;
         }
 
@@ -34,9 +38,48 @@ class order extends controller
         return $data;
     }
 
+    private function postHandler()
+    {
+        try {
+
+            $create_data = [];
+
+            // Sanitize $_POST data
+            //FILTER_SANITIZE_FULL_SPECIAL_CHARS
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+            $user_data['Phone_Number'] = trim($_POST['Phone_Number']);
+            $user_data['Name'] = trim($_POST['Name']);
+
+
+            $previous_data = $this->generateUserCartData();
+
+            $cart_data = $previous_data['items'];
+
+            $create_data['user'] = $user_data;
+            $create_data['cart'] = $cart_data;
+
+            $this->postModel->createOnlineOrder($create_data);
+
+            unsetSession('UserCart');
+            unset($_POST);
+
+            $_SESSION['statusHeader'] = "SUCCESS";
+            $_SESSION['statusMsg'] = "Your Order has been successfully placed!";
+            redirect('pages/status');
+        } catch (Exception $e) {
+            $_SESSION['statusHeader'] = "ERROR";
+            $_SESSION['statusMsg'] = "Error Booking Table: " . $e->getMessage();
+            redirect('pages/status');
+        }
+    }
+
     public function userCheckout()
     {
-        $data = $this->generateUserCartData();
-        $this->view('order/userCheckout', $data);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $this->postHandler();
+        } else {
+            $data = $this->generateUserCartData();
+            $this->view('order/userCheckout', $data);
+        }
     }
 }
