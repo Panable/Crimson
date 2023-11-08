@@ -13,10 +13,9 @@
     <nav class="navbar navbar-expand-lg py-lg-4 bg-dark">
         <div class="col-sm">
 
-<?php
-echo '<a class="p-2 text-white text-decoration-none">' . getSession('user_name') . '</a>';
-?>
-<?php echo URLROOT; ?>menu/
+            <?php
+            echo '<a class="p-2 text-white text-decoration-none">' . getSession('user_name') . '</a>';
+            ?>
         </div>
 
         <div class="col-md">
@@ -25,7 +24,7 @@ echo '<a class="p-2 text-white text-decoration-none">' . getSession('user_name')
         <!-- Right Side Navbar -->
         <div class="col-sm">
             <div class="container my-2-md-0 mr-md-3">
-                <a class="p-2 text-white">Control Panel</a>
+                <a href=<?php echo URLROOT; ?>pages class="p-2 text-white">Control Panel</a>
                 <a href=<?php echo URLROOT; ?>user/logout class="p-2 text-white">Logout</a>
 
             </div>
