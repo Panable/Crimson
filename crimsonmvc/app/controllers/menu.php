@@ -158,6 +158,31 @@ class menu extends controller
         }
     }
 
+    public function waiter()
+    {
+        try {
+            // Sanitize $_POST data
+            //FILTER_SANITIZE_FULL_SPECIAL_CHARS
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                setSession('WaiterCart', $_POST);
+                redirect('order/waiterCheckout');
+
+            } else {
+                $menu = $this->postModel->getMenu();
+                $data = [
+                    'title' => 'Online Ordering:',
+                    'menu' => $menu
+                ];
+                $this->view('menu/waiter', $data);
+            }
+        } catch (Exception $e) {
+            $_SESSION['statusHeader'] = "ERROR";
+            $_SESSION['statusMsg'] = "Error Booking Table: " . $e->getMessage();
+            redirect('pages/status');
+        }
+    }
+
     public function admin()
     {
         $menu = $this->postModel->getMenu();

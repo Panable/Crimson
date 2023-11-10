@@ -1,9 +1,9 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 <h1>
-    USER CHECKOUT
+    Waiter Checkout
 </h1>
-<a href="<?php echo URLROOT . 'menu/pickup'  ?>">
-    <button type="button" class="btn btn-secondary">Secondary</button>
+<a href="<?php echo URLROOT . 'menu/waiter'  ?>">
+    <button type="button" class="btn btn-secondary">Edit Selection</button>
 </a>
 <table class="table">
     <thead>
@@ -38,20 +38,13 @@
         ?>
         <br>
 
-        <form action="<?php echo URLROOT . 'order/userCheckout'  ?>" method="post">
+        <form action="<?php echo URLROOT . 'order/waiterCheckout'  ?>" method="post">
             <div id="edit-section">
                 <!-- Phone Number Form -->
                 <div class="form-group">
-                    <label for="Phone_Number">Phone Number</label>
-                    <input type="tel" name="Phone_Number" class="form-control" required>
+                    <label for="TableNumber">Table Number</label>
+                    <input type="number" name="TableNumber" class="form-control" required>
                 </div>
-
-                <!-- Time Form -->
-                <div class="form-group">
-                    <label for="Time">Name</label>
-                    <input type="text" name="name" class="form-control" required>
-                </div>
-
                 <button type="submit" class="btn btn-primary m-3">Confirm Order</button>
             </div>
         </form>

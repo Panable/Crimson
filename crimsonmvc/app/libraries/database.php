@@ -27,7 +27,7 @@ class database
 
     public function getLastInsertID()
     {
-        $this->dbh->lastInsertId();    
+        return $this->dbh->lastInsertId();    
     }
 
     public function query($sql)

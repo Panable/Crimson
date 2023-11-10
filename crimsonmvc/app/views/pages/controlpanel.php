@@ -3,7 +3,9 @@
     STAFF PANEL
 </h1>
 
-<a href="<?php echo URLROOT?>menu/admin">Menu</a>
+<a href="<?php echo URLROOT?>menu/admin">Admin Menu</a>
+<br>
+<a href="<?php echo URLROOT?>menu/waiter">Waiter Menu</a>
 <br>
 <a href="<?php echo URLROOT?>menu/pickup">Rosters</a>
 <br>
