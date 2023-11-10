@@ -1,5 +1,5 @@
 # Crimson
-A Cafe website built my Dhanveer, James and Callum
+A Cafe website built my Dhanveer, James and Callum for Diploma of IT (Advanced Programming)
 
 ## Running SQL Queries:
 Just modify init.sql and run
