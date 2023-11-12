@@ -4,6 +4,13 @@ Drop Table if exists OnlineBookings;
 Drop Table if exists Orders;
 Drop Table if exists OrderItems;
 Drop Table if exists OnlineOrders;
+Drop Table if exists Roster;
+
+CREATE TABLE Roster (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    EmployeeID INT,
+    DayOfWeek INT
+);
 
 CREATE TABLE menu (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -29,13 +36,6 @@ CREATE TABLE OnlineBookings (
     Guests INT
 );
 
-CREATE TABLE Roster (
-    ID INT PRIMARY KEY,
-    EmployeeID INT,
-    TimeSlot INT,
-    DayOfTheWeek INT;
-);
-
 CREATE TABLE OnlineOrders (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Name NVARCHAR(100),
@@ -55,6 +55,15 @@ CREATE TABLE OrderItems (
     Quantity INT
 );
 
+INSERT INTO Roster(EmployeeID, DayOfWeek)
+Values
+    (5, 1),
+    (1, 1),
+    (3, 2),
+    (2, 2),
+    (2, 3),
+    (1, 4),
+    (5, 5);
 
 INSERT INTO Employees (ID, Name, Email, Position, Password)
 VALUES
