@@ -29,6 +29,13 @@ CREATE TABLE OnlineBookings (
     Guests INT
 );
 
+CREATE TABLE Roster (
+    ID INT PRIMARY KEY,
+    EmployeeID INT,
+    TimeSlot INT,
+    DayOfTheWeek INT;
+);
+
 CREATE TABLE OnlineOrders (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     Name NVARCHAR(100),

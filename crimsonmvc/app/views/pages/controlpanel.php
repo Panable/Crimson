@@ -7,7 +7,7 @@
 <br>
 <a href="<?php echo URLROOT?>menu/waiter">Waiter Menu</a>
 <br>
-<a href="<?php echo URLROOT?>menu/pickup">Rosters</a>
+<a href="<?php echo URLROOT?>roster/adminRoster">Rosters</a>
 <br>
 <a href="<?php echo URLROOT?>pages/about">Orders</a>
 
