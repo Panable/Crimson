@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/adminHeader.php'; ?>
+<?php userEntry() ?>
 <h1>
     STAFF PANEL
 </h1>

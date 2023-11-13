@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/adminHeader.php'; ?>
+<?php userEntry() ?>
     <h1>Make your request</h1>
     <div class="container mt-5">
         <form action="<?php echo URLROOT; ?>roster/rosterRequest/" method="post">

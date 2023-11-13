@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<?php privelagedEntry() ?>
 
 <h1>Create <?php echo $data['tableName'] ?></h1>
 

@@ -1,6 +1,21 @@
 <?php
 session_start();
 
+function privelagedEntry()
+{
+    if (!isManager())
+        die("you are not allowed access");
+}
+
+function userEntry()
+{
+    if (!isLoggedIn())
+    {
+        die("you are not allowed access");
+    }
+
+}
+
 function isLoggedIn()
 {
     return getSession('user_id');

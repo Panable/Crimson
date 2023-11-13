@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/adminHeader.php'; ?>
+<?php privelagedEntry() ?>
 <h1>Roster Request - <?php echo $data['nameOfRequest']->Name ?></h1>
 <div class="container mt-5">
     <form action="<?php echo URLROOT; ?>roster/viewRosterRequest/<?php echo $data['rosterRequestID']; ?>" method="post">

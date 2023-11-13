@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/adminHeader.php'; ?> <!-- header needs to be changed to size view-->
+<?php privelagedEntry() ?>
 
 
 <h1>ADMIN MENU PAGE</h1>

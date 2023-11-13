@@ -1,4 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
+<?php userEntry() ?>
+
 <h1>
     Waiter Checkout
 </h1>

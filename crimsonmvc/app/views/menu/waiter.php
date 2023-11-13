@@ -1,5 +1,6 @@
 <?php require APPROOT . '/views/inc/adminHeader.php'; ?>
 <?php require APPROOT . '/views/inc/template.php'; ?>
+<?php userEntry() ?>
 
 <section class="card-section pt-4 mx-4">
     <div class="my-5 mx-3">

@@ -1,4 +1,5 @@
 <?php require APPROOT . '/views/inc/sidebar.php'; ?>
+<?php privelagedEntry() ?>
 
 <div id="content" class="d-flex justify-content-center">
     <div class="container">
