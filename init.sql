@@ -17,13 +17,13 @@ CREATE TABLE Roster (
 CREATE TABLE RosterRequestItems(
     ID INT PRIMARY KEY AUTO_INCREMENT,
     EmployeeID INT,
-    DayOfWeek INT
+    DayOfWeek INT, 
+    RosterRequestID INT
 );
 
 CREATE TABLE RosterRequest(
     ID INT PRIMARY KEY AUTO_INCREMENT,
-    EmployeeID INT, /* ID OF EMPLOYEE WHO PUT IN THE REQUEST */
-    RosterRequestItemsID INT
+    EmployeeID INT /* ID OF EMPLOYEE WHO PUT IN THE REQUEST */
 );
 
 CREATE TABLE menu (

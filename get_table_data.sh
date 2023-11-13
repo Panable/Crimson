@@ -18,4 +18,8 @@ fi
 table_name="$1"
 
 # Execute SQL query to select all rows from the specified table
-docker exec -i ${service_name} mysql -u${username} -p${password} ${database} -e "SELECT * FROM Roster;"
+docker exec -i ${service_name} mysql -u${username} -p${password} ${database} -e "
+SELECT Employees.Name, RosterRequest.ID AS RosterRequestID
+FROM Employees
+JOIN RosterRequest ON Employees.ID = RosterRequest.EmployeeID;
+"

@@ -1,47 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require APPROOT . '/views/inc/adminHeader.php'; ?>
+<h1>Roster</h1>
+<div class="container mt-5">
+    <form action="<?php echo URLROOT; ?>roster/adminRoster/" method="post">
+        <div class="row">
+            <?php
+            $daysOfWeek = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY'];
+            foreach ($daysOfWeek as $index => $day) {
+                echo '<div class="col text-center">';
+                echo '<div class="d-flex flex-column align-items-center">';
+                echo '<h4>' . $day . '</h4>';
+                echo '<select class="custom-select mt-2" multiple name="' . ($index + 1) . '[]" ' . (isManager() ? '' : 'disabled') . '>';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyewtvxUA+P9oJp1JbsA7fojYBbd+6NIcD" crossorigin="anonymous">
-    <title>Days of the Week Selector</title>
-</head>
-
-<body class="bg-light">
-    <div class="container mt-5">
-        <form action="<?php echo URLROOT; ?>roster/adminRoster/" method="post">
-            <div class="row">
-                <?php
-                $daysOfWeek = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY'];
-                foreach ($daysOfWeek as $index => $day) {
-                    echo '<div class="col">';
-                    echo '<h4 class="text-center">' . $day . '</h4>';
-                    echo '<select class="custom-select" multiple name="' . ($index + 1) . '[]" ' . (isManager() ? '' : 'disabled') . '>';
-
-                    foreach ($data as $item) {
-                        $isSelected = $this->isWorkingToday($item->ID, $index + 1);
-                        echo '<option value="' . $item->ID . '" ' . ($isSelected ? 'selected' : '') . '>' . $item->Name . '</option>';
-                    }
-
-                    echo '</select>';
-                    echo '</div>';
+                foreach ($data['roster'] as $item) {
+                    $isSelected = $this->isWorkingToday($item->ID, $index + 1);
+                    echo '<option value="' . $item->ID . '" ' . ($isSelected ? 'selected' : '') . '>' . $item->Name . '</option>';
                 }
-                ?>
-            </div>
-            <?php if (isManager()) : ?>
-                <button type="submit" class="btn btn-primary mt-3">Submit</button>
-            <?php endif; ?>
-        </form>
-    </div>
-    <?php if (!isManager()) : ?>
-        <a href="<?php echo URLROOT; ?>roster/requestPage" class="btn btn-primary mt-3">Make Roster Request</a>
-    <?php endif; ?>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9Jvo0bL+2Yb9I" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyewtvxUA+P9oJp1JbsA7fojYBbd+6NIcD" crossorigin="anonymous"></script>
+                echo '</select>';
+                echo '</div>';
+                echo '</div>';
+            }
+            ?>
+        </div>
+        <?php if (isManager()) : ?>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        <?php endif; ?>
+    </form>
+</div>
+<?php if (!isManager()) : ?>
+    <a href="<?php echo URLROOT; ?>roster/rosterRequest" class="btn btn-primary mt-3">Make Roster Request</a>
+<?php endif; ?>
 
-</body>
+<?php
+if (isManager()) :
+?>
 
-</html>
+    <h2>Roster Requests</h2>
+
+    <?php foreach ($data['requests'] as $value) : ?>
+        <div style="display: flex; justify-content: space-between;">
+            <p class="d-inline-block mr-3"><?= $value->Name ?></p>
+            <a href="<?= URLROOT ?>roster/viewRosterRequest/<?= $value->RosterRequestID ?>" class="btn btn-primary">View Request</a>
+        </div>
+    <?php endforeach; ?>
+
+<?php endif; ?>
+<?php require APPROOT . '/views/inc/footer.php'; ?>
