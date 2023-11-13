@@ -6,6 +6,16 @@ function isLoggedIn()
     return getSession('user_id');
 }
 
+function isManager()
+{
+    return getSession('user_position') == 'Manager';
+}
+
+function isHeadChef()
+{
+//TODO
+}
+
 function unsetSession($key)
 {
     unset($_SESSION[$key]);

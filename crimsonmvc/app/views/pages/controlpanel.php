@@ -3,12 +3,16 @@
     STAFF PANEL
 </h1>
 
-<a href="<?php echo URLROOT?>menu/admin">Admin Menu</a>
+<?php
+if (isManager()) {
+    echo '<a href="' . URLROOT . 'menu/admin">Admin Menu</a>';
+    echo '<br>';
+}
+?>
+<a href="<?php echo URLROOT ?>menu/waiter">Waiter Menu</a>
 <br>
-<a href="<?php echo URLROOT?>menu/waiter">Waiter Menu</a>
+<a href="<?php echo URLROOT ?>roster/adminRoster">Roster</a>
 <br>
-<a href="<?php echo URLROOT?>roster/adminRoster">Rosters</a>
-<br>
-<a href="<?php echo URLROOT?>pages/about">Orders</a>
+<a href="<?php echo URLROOT ?>pages/about">Orders</a>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

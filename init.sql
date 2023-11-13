@@ -5,11 +5,25 @@ Drop Table if exists Orders;
 Drop Table if exists OrderItems;
 Drop Table if exists OnlineOrders;
 Drop Table if exists Roster;
+Drop Table if exists RosterRequestItems;
+Drop Table if exists RosterRequest;
 
 CREATE TABLE Roster (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     EmployeeID INT,
     DayOfWeek INT
+);
+
+CREATE TABLE RosterRequestItems(
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    EmployeeID INT,
+    DayOfWeek INT
+);
+
+CREATE TABLE RosterRequest(
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    EmployeeID INT, /* ID OF EMPLOYEE WHO PUT IN THE REQUEST */
+    RosterRequestItemsID INT
 );
 
 CREATE TABLE menu (
