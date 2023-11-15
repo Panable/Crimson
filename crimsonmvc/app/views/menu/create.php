@@ -15,7 +15,8 @@
         }
     }
     ?>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary"> SUBMIT </button>
+    <button type="reset" class="btn btn-danger"> RESET </button>
 </form>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

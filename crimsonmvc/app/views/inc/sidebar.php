@@ -15,26 +15,64 @@
                     <h1> Crimson Cafe </h1>
                 </div>
             </div>
+
+
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <span class="material-symbols-outlined" id="sidebar-nav"> view_cozy </span>
+                <!-- Dashboard -->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> view_cozy </span>
                     Dashboard
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action">
-                    <span class="material-symbols-outlined" id="sidebar-nav"> calendar_today </span>
-                    Roster View
-                </a>
-
-                <a href="#" class="nav-link list-group-item list-group-item-action">
-                    <span class="material-symbols-outlined" id="sidebar-nav">home</span>
+                <!-- Menu -->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> restaurant_menu </span>
                     Menu
                 </a>
 
-                <a href="#" class="list-group-item list-group-item-action">
-                    <span class="material-symbols-outlined" id="sidebar-nav">home</span>
-                    Table
+                <!-- Edit Menu -->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> edit </span>
+                    Edit Menu
                 </a>
+
+                <!-- Add Menu Item -->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> menu_book </span>
+                    Add Menu Item
+                </a>
+
+
+                <!-- Employee List -->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> badge </span>
+                    Employee List
+                </a>
+
+                <!-- Roster Setup-->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> calendar_month </span>
+                    Roster Setup
+                </a>
+
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> store </span>
+                    Serving Menu
+                </a>
+
+
+                <!-- Online Bookings -->
+                <a href="#" class="list-group-item list-group-item-action rounded-5" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> schedule </span>
+                    Online Booking
+                </a>
+
+                <!-- Order List -->
+                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
+                    <span class="material-symbols-outlined" id="nav-icon"> receipt_long </span>
+                    Order List
+                </a>
+
             </div>
 
             <!-- add logout button here -->

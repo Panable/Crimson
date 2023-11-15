@@ -12,8 +12,8 @@
         <div class="container-fluid">
             <div class="col-sm">
                 <a href="<?php echo URLROOT; ?>">
-                    <span class="material-symbols-outlined pl-5"> arrow_back </span>
-                    <span>Back</span>
+                    <span id="icon-home" class="material-symbols-outlined pl-5"> arrow_back </span>
+                    <span id="icon-home">Back</span>
                 </a>
             </div>
 

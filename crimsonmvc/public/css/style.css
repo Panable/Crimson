@@ -29,6 +29,10 @@
     --edit-input: #EDF1F5;
     --section-white: #FAFAFA;
 
+    --backpage-green: #53E383;
+
+    --icon-color-nav: #68AEE5;
+    --icon-border: #172D40;
 }
 
 
@@ -123,4 +127,23 @@ table > tbody > tr:nth-child(odd), tr  {
 }
 label#item-field {
     font-family: "DM Sans", serif;
+}
+
+
+a#icon-home {
+    color: var(--backpage-green);
+    font-family: "DM Sans", serif;
+    font-size: 32px;
+}
+
+a#sidebar-item {
+    font-family: "Outfit", serif;
+    font-size: 24px;
+    color: var(--light-text);
+}
+
+a#nav-icon {
+    font-size: 24px;
+    color: var(--icon-color-nav);
+    background-color: var(--icon-border);
 }
