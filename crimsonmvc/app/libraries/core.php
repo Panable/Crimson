@@ -7,9 +7,9 @@
 
 class core
 {
-    protected $currentController = 'pages'; //default controller
-    protected $currentMethod = 'index';
-    protected $params = [];
+    public $currentController = 'pages'; //default controller
+    public $currentMethod = 'index';
+    public $params = [];
 
     public function routeUrl()
     {
