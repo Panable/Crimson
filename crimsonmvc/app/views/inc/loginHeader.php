@@ -11,22 +11,18 @@
     <nav class="navbar navbar-expand-lg py-lg-4 custom-nav">
         <div class="container-fluid">
             <div class="col-sm">
-                <a href="<?php echo URLROOT; ?>">
-                    <span id="icon-home" class="material-symbols-outlined pl-5"> arrow_back </span>
-                    <span id="icon-home">Back</span>
+                <a href="<?php echo URLROOT; ?>" class="text-decoration-none fs-3" id="icon-home">
+                    <span class="material-symbols-outlined fs-2"> arrow_back </span>
+                    <span>Back</span>
                 </a>
-            </div>
 
-            <div class="col-sm">
-                <h1 class="text-center">Crimson Cafe</h1>
             </div>
 
             <div class="col-md">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo URLROOT; ?>">Home</a>
-                    </li>
-                </ul>
+                <h1 class="text-center">Crimson Cafe</h1>
+            </div>
+
+            <div class="col-sm">
             </div>
         </div>
     </nav>

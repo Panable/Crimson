@@ -133,17 +133,40 @@ label#item-field {
 a#icon-home {
     color: var(--backpage-green);
     font-family: "DM Sans", serif;
-    font-size: 32px;
+    margin-left: 2.5rem;
 }
 
-a#sidebar-item {
+/* Footer */
+label#footer-logo {
+    font-family: 'Croissant One', serif;
+    color: var(--header1-text);
+}
+
+footer {
+    background-color: var(--nav-background);
+    color: white;
+}
+
+#footer-topic {
+    font-family: 'DM Sans', serif;
+    color: var(--light-text);
+}
+
+a#footer-link  {
+    color: var(--light-text);
+    font-family: 'Outfit', serif;
+}
+
+
+/*
+{
     font-family: "Outfit", serif;
     font-size: 24px;
     color: var(--light-text);
 }
 
-a#nav-icon {
+a#back-icon {
     font-size: 24px;
     color: var(--icon-color-nav);
     background-color: var(--icon-border);
-}
+}*/
