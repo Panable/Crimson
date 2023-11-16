@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title><?php echo SITENAME; ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?php echo URLROOT; ?>css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="wrapper d-flex align-items-stretch">
-        <nav class="sidebar vh-100 bg-dark">
-            <div class="text-center py-4">
-                <div>
-                    <h1> Crimson Cafe </h1>
-                </div>
+<div class="wrapper d-flex align-items-stretch">
+    <nav class="sidebar vh-100 w-25" id="sidebar-nav">
+        <div class="text-center py-4">
+            <div>
+                <label class="fs-2" id="sidenav-logo"> Crimson Café </label>
             </div>
+        </div>
 
 
-            <div class="list-group">
-                <!-- Dashboard -->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> view_cozy </span>
-                    Dashboard
-                </a>
-
-                <!-- Menu -->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> restaurant_menu </span>
-                    Menu
-                </a>
-
-                <!-- Edit Menu -->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> edit </span>
-                    Edit Menu
-                </a>
-
-                <!-- Add Menu Item -->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> menu_book </span>
-                    Add Menu Item
-                </a>
+        <div class="list-group">
+            <!-- Dashboard -->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> view_cozy </span>
+                <span class="text">Dashboard</span>
+            </a>
 
 
-                <!-- Employee List -->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> badge </span>
-                    Employee List
-                </a>
+            <!-- Menu -->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> restaurant_menu </span>
+                <span class="text"> Menu </span>
+            </a>
 
-                <!-- Roster Setup-->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> calendar_month </span>
-                    Roster Setup
-                </a>
+            <!-- Edit Menu -->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> edit </span>
+                <span class="text">Edit Menu</span>
+            </a>
 
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> store </span>
-                    Serving Menu
-                </a>
+            <!-- Add Menu Item -->
+            <a href="#" class="text-decoration-none  fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> menu_book </span>
+                <span class="text">Add Menu Item </span>
+            </a>
 
 
-                <!-- Online Bookings -->
-                <a href="#" class="list-group-item list-group-item-action rounded-5" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> schedule </span>
-                    Online Booking
-                </a>
+            <!-- Employee List -->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> badge </span>
+                <span class="text">Employee List </span>
+            </a>
 
-                <!-- Order List -->
-                <a href="#" class="list-group-item list-group-item-action" id="sidebar-item">
-                    <span class="material-symbols-outlined" id="nav-icon"> receipt_long </span>
-                    Order List
-                </a>
+            <!-- Roster Setup-->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> calendar_month </span>
+                <span class="text">Roster Setup </span>
+            </a>
 
-            </div>
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> store </span>
+                <span class="text">Serving Menu </span>
+            </a>
 
-            <!-- add logout button here -->
-        </nav>
+
+            <!-- Online Bookings -->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> schedule </span>
+                <span class="text">Online Booking </span>
+            </a>
+
+            <!-- Order List -->
+            <a href="#" class="text-decoration-none fs-4" id="sidebar-item">
+                <span class="material-symbols-outlined p-2 rounded my-3 mx-4"> receipt_long </span>
+                <span class="text">Order List</span>
+            </a>
+
+        </div>
+
+
+    </nav>
 
 
 

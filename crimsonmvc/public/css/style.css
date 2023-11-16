@@ -6,12 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
-
 /* Material Symbols*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
-
-
 
 
 /* Custom Colour */
@@ -33,6 +30,7 @@
 
     --icon-color-nav: #68AEE5;
     --icon-border: #172D40;
+    --sidenav-color: #232121;
 }
 
 
@@ -50,8 +48,8 @@ h1 {
 }
 
 img {
-  width: auto;
-  height: 200px;
+    width: auto;
+    height: 200px;
 }
 
 
@@ -79,8 +77,6 @@ input#email, input#password {
 }
 
 
-
-
 /* Admin Menu Page Table Style */
 th {
     font-family: 'DM Sans', sans-serif;
@@ -93,11 +89,10 @@ table > tbody > tr:nth-child(even), thead {
 }
 
 
-table > tbody > tr:nth-child(odd), tr  {
+table > tbody > tr:nth-child(odd), tr {
     background-color: var(--table-bg-dark);
     font-family: 'Roboto', sans-serif;
 }
-
 
 
 /* CRUD Menu Page */
@@ -106,10 +101,8 @@ table > tbody > tr:nth-child(odd), tr  {
     font-family: "DM Sans", serif;
 }
 
-/* Sidebar */
-#sidebar-nav {
-    display: inline-block;
-}
+
+
 
 #item-image {
     width: 100%;
@@ -125,6 +118,7 @@ table > tbody > tr:nth-child(odd), tr  {
 #edit-section {
     background-color: var(--section-white);
 }
+
 label#item-field {
     font-family: "DM Sans", serif;
 }
@@ -152,21 +146,50 @@ footer {
     color: var(--light-text);
 }
 
-a#footer-link  {
+a#footer-link {
     color: var(--light-text);
     font-family: 'Outfit', serif;
 }
 
+/*  Booking */
+#booking-body {
+    background: linear-gradient(0deg, rgba(29, 26, 26, 0.85) 0%, rgba(29, 26, 26, 0.85) 100%), url("https://h7.alamy.com/comp/2JDJ309/lovely-hand-drawn-coffee-seamless-pattern-cute-doodle-background-great-for-banners-wallpapers-wrapping-fabrics-vector-design-2JDJ309.jpg"), lightgray 50% / cover no-repeat;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
-/*
-{
+
+
+/* Sidebar */
+#sidenav-logo {
+    font-family: "Croissant One", serif;
+    color: var(--header1-text);
+}
+#sidebar-nav {
+    display: inline-block;
+    background-color: var(--sidenav-color);
+}
+
+a#sidebar-item {
+    font-family: "Outfit", serif;
+    color: var(--light-text);
+}
+#nav-icon {
     font-family: "Outfit", serif;
     font-size: 24px;
     color: var(--light-text);
 }
 
+span.material-symbols-outlined.p-2 {
+    color: var(--icon-color-nav);
+    background-color: var(--icon-border);
+}
+
+
+
+/* Forgot where this was suppose to be a part of, lol
 a#back-icon {
     font-size: 24px;
     color: var(--icon-color-nav);
     background-color: var(--icon-border);
-}*/
+}
+*/

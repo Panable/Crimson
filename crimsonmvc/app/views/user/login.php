@@ -1,4 +1,3 @@
-<!--<link href="<?php /*echo URLROOT; */ ?>css/style.css" rel="stylesheet"> Not needed to import since it exists in loginHeader-->
 <?php require APPROOT . '/views/inc/loginHeader.php'; ?>
 
 
