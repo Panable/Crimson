@@ -9,11 +9,17 @@ function privelagedEntry()
 
 function userEntry()
 {
-    if (!isLoggedIn())
-    {
+    if (!isLoggedIn()) {
         die("you are not allowed access");
     }
+}
 
+function forceAdminLogin()
+{
+    setSession('user_id', 99);
+    setSession('user_email', "Chelton@gmail.com");
+    setSession('user_name', 'Chelton');
+    setSession('user_position', 'Manager');
 }
 
 function isLoggedIn()
@@ -28,7 +34,7 @@ function isManager()
 
 function isHeadChef()
 {
-//TODO
+    //TODO
 }
 
 function unsetSession($key)

@@ -7,7 +7,7 @@
 
 class core
 {
-    protected $currentController = 'pages'; //default controller
+    public $currentController = 'pages'; //default controller
     protected $currentMethod = 'index';
     protected $params = [];
 
@@ -15,12 +15,12 @@ class core
     {
         $url = $this->getUrl();
         if (!is_null($url)) {
-            if (file_exists('../app/controllers/' . $url[0] . '.php')) {
+            if (file_exists(__DIR__. '/../controllers/' . $url[0] . '.php')) {
                 //set as current controller
                 $this->currentController = $url[0];
                 unset($url[0]);
 
-                require_once '../app/controllers/' . $this->currentController . '.php';
+                require_once __DIR__ . '/../controllers/' . $this->currentController . '.php';
 
                 $this->currentController = new $this->currentController;
 
@@ -39,7 +39,7 @@ class core
             }
         } else {
             noController:
-            require_once '../app/controllers/' . $this->currentController . '.php';
+            require_once __DIR__ . '/../controllers/' . $this->currentController . '.php';
             $this->currentController = new $this->currentController;
             call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
         }
@@ -56,6 +56,7 @@ class core
         if (isset($_GET['url'])) {
             //trim url of trailing '/' ex: /bing/chilling/ -> /bing/chilling
             $url = rtrim($_GET['url'], '/');
+
 
             //sanitizes the url of any unsafe stuff ex
             //ex before - https://example.com/page?param=<script>alert('xss')</script>
