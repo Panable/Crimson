@@ -7,7 +7,7 @@
 
 class core
 {
-    protected $currentController = 'pages'; //default controller
+    public $currentController = 'pages'; //default controller
     protected $currentMethod = 'index';
     protected $params = [];
 
@@ -20,7 +20,7 @@ class core
                 $this->currentController = $url[0];
                 unset($url[0]);
 
-                require_once '../app/controllers/' . $this->currentController . '.php';
+                require_once __DIR__ . '/../controllers/' . $this->currentController . '.php';
 
                 $this->currentController = new $this->currentController;
 
@@ -39,7 +39,7 @@ class core
             }
         } else {
             noController:
-            require_once '../app/controllers/' . $this->currentController . '.php';
+            require_once __DIR__ . '/../controllers/' . $this->currentController . '.php';
             $this->currentController = new $this->currentController;
             call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
         }

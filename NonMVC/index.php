@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php require_once "template.php"; ?>
+    <?php require_once __DIR__ . "/template.php"; ?>
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg py-lg-4 bg-dark">
         <div class="col-sm">
