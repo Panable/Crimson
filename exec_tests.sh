@@ -1,2 +1,4 @@
 #!/bin/sh
-docker exec crimson-php-apache-1 php /var/www/html/testing.php
+
+./exec_query.sh
+docker exec crimson-php-apache-1 php /var/www/html/CheltonPHPUnit.php

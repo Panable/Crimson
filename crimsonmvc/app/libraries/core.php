@@ -15,7 +15,7 @@ class core
     {
         $url = $this->getUrl();
         if (!is_null($url)) {
-            if (file_exists('../app/controllers/' . $url[0] . '.php')) {
+            if (file_exists(__DIR__. '/../controllers/' . $url[0] . '.php')) {
                 //set as current controller
                 $this->currentController = $url[0];
                 unset($url[0]);
@@ -56,6 +56,7 @@ class core
         if (isset($_GET['url'])) {
             //trim url of trailing '/' ex: /bing/chilling/ -> /bing/chilling
             $url = rtrim($_GET['url'], '/');
+
 
             //sanitizes the url of any unsafe stuff ex
             //ex before - https://example.com/page?param=<script>alert('xss')</script>

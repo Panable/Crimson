@@ -16,7 +16,7 @@ class user extends controller
 
     public function login()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
             //sanitize
             $_POST = array_map("htmlspecialchars", $_POST);
             // Init data
