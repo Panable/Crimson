@@ -1,25 +1,41 @@
 <?php
 
+/*
+ * User Class
+ * Extends the base Controller class, handles user-related functionality
+ */
 class user extends controller
 {
+    /*
+     * Constructor method
+     * Initializes the model for handling user data
+     */
     public function __construct()
     {
         $this->postModel = $this->model('usermodel');
     }
 
+    /*
+     * Method to check if there are credential errors in the data
+     */
     private function hasCredentialErrors($data)
     {
-        if (!empty($data['email_err']) || !empty($data['password_err']))
+        if (!empty($data['email_err']) || !empty($data['password_err'])) {
             return true;
+        }
         return false;
     }
 
+    /*
+     * Method to handle the login process
+     */
     public function login()
     {
         if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-            //sanitize
+            // Sanitize
             $_POST = array_map("htmlspecialchars", $_POST);
-            // Init data
+            
+            // Initialize data
             $data = [
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
@@ -27,6 +43,7 @@ class user extends controller
                 'password_err' => '',
             ];
 
+            // Validate Email
             if (empty($data['email'])) {
                 $data['email_err'] = 'Please enter email';
             }
@@ -36,14 +53,16 @@ class user extends controller
                 $data['password_err'] = 'Please enter password';
             }
 
+            // Check for credential errors
             if ($this->hasCredentialErrors($data)) {
                 $this->view('user/login', $data);
             }
 
+            // Attempt to login
             $user = $this->postModel->login($data['email'], $data['password']);
 
             if ($user) {
-                //SUCCESS
+                // SUCCESS
                 $this->createUserSession($user);
             } else {
                 $data['password_err'] = 'Incorrect Credentials';
@@ -61,6 +80,9 @@ class user extends controller
         $this->view('user/login');
     }
 
+    /*
+     * Method to create user session upon successful login
+     */
     public function createUserSession($user)
     {
         setSession('user_id', $user->ID);
@@ -70,6 +92,9 @@ class user extends controller
         redirect('pages/index');
     }
 
+    /*
+     * Method to handle user logout
+     */
     public function logout()
     {
         unsetSession('user_id');
@@ -81,6 +106,9 @@ class user extends controller
         redirect('pages/index');
     }
 
+    /*
+     * Method to check if a user is logged in
+     */
     public function isLoggedIn()
     {
         if (isset($_SESSION['user_id'])) {

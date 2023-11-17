@@ -1,19 +1,29 @@
 <?php
 session_start();
 
+/*
+ * Function to check for manager privilege
+ */
 function privelagedEntry()
 {
-    if (!isManager())
-        die("you are not allowed access");
-}
-
-function userEntry()
-{
-    if (!isLoggedIn()) {
-        die("you are not allowed access");
+    if (!isManager()) {
+        die("You are not allowed access");
     }
 }
 
+/*
+ * Function to check for user login
+ */
+function userEntry()
+{
+    if (!isLoggedIn()) {
+        die("You are not allowed access");
+    }
+}
+
+/*
+ * Function to force admin login for testing purposes
+ */
 function forceAdminLogin()
 {
     setSession('user_id', 99);
@@ -22,31 +32,49 @@ function forceAdminLogin()
     setSession('user_position', 'Manager');
 }
 
+/*
+ * Function to check if a user is logged in
+ */
 function isLoggedIn()
 {
     return getSession('user_id');
 }
 
+/*
+ * Function to check if a user is a manager
+ */
 function isManager()
 {
     return getSession('user_position') == 'Manager';
 }
 
+/*
+ * Function to check if a user is a head chef (TODO: implement)
+ */
 function isHeadChef()
 {
-    //TODO
+    // TODO: Implementation pending
 }
 
+/*
+ * Function to unset a session variable
+ */
 function unsetSession($key)
 {
     unset($_SESSION[$key]);
 }
 
+/*
+ * Function to set a session variable
+ */
 function setSession($key, $value)
 {
     $_SESSION[$key] = $value;
 }
 
+/*
+ * Function to get the value of a session variable
+ */
 function getSession($key)
 {
     if (empty($_SESSION[$key])) {
@@ -56,26 +84,37 @@ function getSession($key)
     return $_SESSION[$key];
 }
 
+/*
+ * Function to display a flashed message
+ */
 function flash($name = '', $message = '', $class = 'alert alert-success')
 {
-    //session is empty, yet name and message is provided
+    // Session is empty, yet name and message are provided
     $genNewSession = !empty($name) && !empty($message) && getSession($name);
 
     $flashTheMessage = empty($message) && !getSession($name);
 
-    if ($genNewSession)
+    if ($genNewSession) {
         generateNewSession($name, $message, $class);
+    }
 
-    if ($flashTheMessage)
+    if ($flashTheMessage) {
         flashMessageFromSessionAndUnset($name);
+    }
 }
 
+/*
+ * Function to generate a new session for a flashed message
+ */
 function generateNewSession($name, $message, $class)
 {
     setSession($name, $message);
     setSession($name . '_class', $class);
 }
 
+/*
+ * Function to display a flashed message from a session and unset the session
+ */
 function flashMessageFromSessionAndUnset($name)
 {
     $class = !getSession($name . '_class') ? getSession($name . '_class') : '';

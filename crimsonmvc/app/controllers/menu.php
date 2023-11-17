@@ -1,10 +1,16 @@
 <?php
+/*
+ * Menu Class
+ * Extends the base Controller class, handles menu-related operations
+ */
 class menu extends controller
 {
-
+    /*
+     * Private method to send an error response
+     * @param string $message - Error message to be included in the response
+     */
     private function sendError($message)
     {
-
         // Construct a JSON response for an error
         $errorResponse = [
             'error' => [
@@ -23,6 +29,9 @@ class menu extends controller
         exit;
     }
 
+    /*
+     * Method to handle menu creation
+     */
     public function create()
     {
         try {
@@ -74,6 +83,9 @@ class menu extends controller
         }
     }
 
+    /*
+     * Private method to send a success response
+     */
     private function sendSuccess()
     {
         // Construct a JSON response for success
@@ -94,6 +106,10 @@ class menu extends controller
         echo json_encode($successResponse);
     }
 
+    /*
+     * Method to handle menu item deletion
+     * @param int $id - ID of the menu item to be deleted
+     */
     public function delete($id)
     {
         try {
@@ -118,11 +134,18 @@ class menu extends controller
         }
     }
 
+    /*
+     * Constructor method
+     * Initializes the model for handling menu data
+     */
     public function __construct()
     {
         $this->postModel = $this->model('menumodel');
     }
 
+    /*
+     * Method to handle the index page for the menu
+     */
     public function index()
     {
         $menu = $this->postModel->getMenu();
@@ -133,6 +156,9 @@ class menu extends controller
         $this->view('menu/index', $data);
     }
 
+    /*
+     * Method to handle menu pickup
+     */
     public function pickup()
     {
         try {
@@ -142,7 +168,6 @@ class menu extends controller
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 setSession('UserCart', $_POST);
                 redirect('order/usercheckout');
-
             } else {
                 $menu = $this->postModel->getMenu();
                 $data = [
@@ -158,6 +183,9 @@ class menu extends controller
         }
     }
 
+    /*
+     * Method to handle menu waiter orders
+     */
     public function waiter()
     {
         try {
@@ -167,7 +195,6 @@ class menu extends controller
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                 setSession('WaiterCart', $_POST);
                 redirect('order/waiterCheckout');
-
             } else {
                 $menu = $this->postModel->getMenu();
                 $data = [
@@ -183,6 +210,9 @@ class menu extends controller
         }
     }
 
+    /*
+     * Method to handle the admin page for the menu
+     */
     public function admin()
     {
         $menu = $this->postModel->getMenu();
@@ -193,23 +223,16 @@ class menu extends controller
         $this->view('menu/admin', $data);
     }
 
-    // Added edit page to be viewable through localhost/crimsonmvc/menu/edit
-    public function edit1()
-    {
-        $menu = $this->postModel->getMenu();
-        $data = [
-            'title' => 'Menu: ',
-            'menu' => $menu
-        ];
-        $this->view('menu/edit', $data);
-    }
+    /*
+     * Method to handle menu item editing
+     * @param int $id - ID of the menu item to be edited
+     */
     public function edit($id)
     {
         try {
             if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'PUT') {
                 // Get the raw PUT data from the request
                 $putData = file_get_contents("php://input");
-                $_SESSION['statusHeader1'] = $putData;
 
                 if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
                     // Parse the raw data as JSON
@@ -228,6 +251,7 @@ class menu extends controller
                     $sanitizedPutData['id'] = $id;
                 }
 
+                // Attempt to edit the menu item
                 $this->postModel->editRow('menu', $sanitizedPutData);
 
                 if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
@@ -239,6 +263,7 @@ class menu extends controller
                     redirect('pages/status');
                 }
             } else {
+                // Get menu item data for editing
                 $table = $this->postModel->readRow('menu', $id);
 
                 $data = [
@@ -255,15 +280,21 @@ class menu extends controller
         }
     }
 
+    /*
+     * Method to handle reading menu data
+     */
     public function read()
     {
         try {
+            // Get menu data
             $table = $this->postModel->readTable('menu');
 
+            // Check if the request method is GET and send JSON response
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 echo json_encode($table);
             }
         } catch (Exception $e) {
+            // Check if the request method is GET and send JSON error response
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
                     $this->sendError($e->getMessage());
