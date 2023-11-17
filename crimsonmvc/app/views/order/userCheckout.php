@@ -49,7 +49,7 @@
                 <!-- Time Form -->
                 <div class="form-group">
                     <label for="Time">Name</label>
-                    <input type="text" name="name" class="form-control" required>
+                    <input type="text" name="Name" class="form-control" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary m-3">Confirm Order</button>

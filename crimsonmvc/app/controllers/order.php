@@ -118,7 +118,7 @@ class order extends controller
             $user_data['Name'] = trim($_POST['Name']);
 
 
-            $previous_data = $this->generateWaiterCartData();
+            $previous_data = $this->generateUserCartData();
 
             $cart_data = $previous_data['items'];
 
