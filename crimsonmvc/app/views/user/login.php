@@ -10,12 +10,12 @@
                     <h2 id="title" class="fw-normal mb-3 pb-3 text-center">Log in</h2>
 
                     <!-- Email input -->
-                    <div class="form-outline my-5">
+                    <div class="form-outline pt-1 mb-4 my-5">
                         <label id="form-label" for="email" class="form-label fs-5 m-0">Email Address</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group">
                             <div class="input-group-prepend">
                                 <label>
-                                    <input type="email" name="email" id="email" placeholder="Email" class="fs-4 shadow-none form-control rounded-pill form-control form-control-lg rounded-5 border border-5" <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>/>
+                                    <input type="email" name="email" id="email" placeholder="Email" class="fs-4 shadow-none form-control rounded-pill form-control-lg rounded-5 border border-5 <?php echo (!empty($data['email_err'])) ? 'is-invalid' : ''; ?>"/>
                                 </label>
                             </div>
                         </div>
@@ -27,19 +27,17 @@
                         <label id="form-label" for="password" class="form-label fs-5">Password</label>
                         <div class="input-group">
                             <label>
-                                <input type="password" name="password" id="password" placeholder="Password"
-                                       class="fs-4 shadow-none form-control form-control-lg rounded-5 border border-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>"/>
+                                <input type="password" name="password" id="password" placeholder="Password" class="fs-4 shadow-none form-control form-control-lg rounded-5 border border-5 <?php echo (!empty($data['password_err'])) ? 'is-invalid' : ''; ?>"/>
                             </label>
                         </div>
                         <span class="invalid-feedback"><?php echo $data['password_err']; ?></span>
                     </div>
 
-
                     <!-- Login Button -->
                     <div class="pt-1 mb-4 my-5">
-                        <input type="submit" value="Login" id="loginBtn"
-                               class="fs-4 rounded-pill form-control form-control-lg rounded-5 ">
+                        <input type="submit" value="Login" id="loginBtn" class="fs-4 rounded-pill form-control form-control-lg rounded-5" style="width: 100%;">
                     </div>
+
                 </form>
             </div>
         </div>

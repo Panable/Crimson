@@ -2,7 +2,7 @@
 
     <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
-        <div class="row mt-3">
+        <div class="row">
             <!-- Grid column -->
             <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
                 <!-- Content -->
@@ -14,7 +14,7 @@
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 d-flex flex-column">
                 <!-- Links -->
-                <label class="fw-bold fs-4 mb-4" id="footer-topic"> About Us </label>
+                <label class="fw-bold fs-4 mb-1" id="footer-topic"> About Us </label>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Our Story </a>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Meet the Team </a>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Location </a>
@@ -22,7 +22,7 @@
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 d-flex flex-column">
                 <!-- Links -->
-                <label class="fw-bold fs-4 mb-4" id="footer-topic"> Menu </label>
+                <label class="fw-bold fs-4 mb-1" id="footer-topic"> Menu </label>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Coffee & Tea </a>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Breakfast </a>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Lunch </a>
@@ -34,7 +34,7 @@
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 d-flex flex-column">
                 <!-- Links -->
-                <label class="fw-bold fs-4 mb-4" id="footer-topic">Online Ordering </label>
+                <label class="fw-bold fs-4 mb-1" id="footer-topic">Online Ordering </label>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Order Online </a>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Online Menu </a>
                 <a href="#" id="footer-link" class="text-decoration-none my-2 mx-3"> Pick Up Instructions </a>
@@ -46,9 +46,13 @@
     </div>
 
 
-    <div class="p-4"
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-
+    <div class="row p-4">
+        <hr class="text-white">
+        <label class="text-white"> ©Copyright 2023-2023, Crimson Café, Swinburne University of Technology </label>
+    </div>
+    <div class="row p-4">
+        <i class="fab fa-facebook-f"></i>
+    </div>
 </footer>
 <!-- Footer -->
 <script src="<?php echo URLROOT; ?>js/main.js"></script>

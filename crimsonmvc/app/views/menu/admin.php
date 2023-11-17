@@ -1,8 +1,9 @@
-<?php require APPROOT . '/views/inc/adminHeader.php'; ?> <!-- header needs to be changed to size view-->
+<?php require APPROOT . '/views/inc/sidebar.php'; ?> <!-- header needs to be changed to size view-->
 <?php privelagedEntry() ?>
 
 
 <h1>ADMIN MENU PAGE</h1>
+
 
 
 <section class="card-section pt-4 mx-4">
@@ -10,8 +11,8 @@
         <h2>Menu</h2>
     </div>
 
-
-    <table class="table">
+    <div class="d-flex flex-column">
+        <table class="table flex-grow-1">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -57,8 +58,8 @@
     <!-- Switching Pages Finished! perhaps make a border round it
          Use if there are more items in the database.
     -->
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-start">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-start">
             <li class="page-item">
                 <a class="rounded-start" href="#">
                     <span class="page-link material-symbols-outlined"> arrow_back </span>

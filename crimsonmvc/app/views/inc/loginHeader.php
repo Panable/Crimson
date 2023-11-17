@@ -11,11 +11,10 @@
     <nav class="navbar navbar-expand-lg py-lg-4 custom-nav">
         <div class="container-fluid">
             <div class="col-sm">
-                <a href="<?php echo URLROOT; ?>" class="text-decoration-none fs-3" id="icon-home">
-                    <span class="material-symbols-outlined fs-2"> arrow_back </span>
+                <a href="<?php echo URLROOT; ?>" class="text-decoration-none fs-3 d-flex align-items-center" id="icon-home">
+                    <span class="material-symbols-outlined fs-2 me-3"> arrow_back </span>
                     <span>Back</span>
                 </a>
-
             </div>
 
             <div class="col-md">

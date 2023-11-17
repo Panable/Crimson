@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 /* Material Symbols*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -31,6 +32,8 @@
     --icon-color-nav: #68AEE5;
     --icon-border: #172D40;
     --sidenav-color: #232121;
+
+    --admin-title: #2B2D42;
 }
 
 
@@ -93,15 +96,6 @@ table > tbody > tr:nth-child(odd), tr {
     background-color: var(--table-bg-dark);
     font-family: 'Roboto', sans-serif;
 }
-
-
-/* CRUD Menu Page */
-#menu-input {
-    background-color: var(--edit-input);
-    font-family: "DM Sans", serif;
-}
-
-
 
 
 #item-image {
@@ -193,3 +187,20 @@ a#back-icon {
     background-color: var(--icon-border);
 }
 */
+
+/* Create & Add Item */
+input#menu-item-edit {
+    background-color: var(--edit-input);
+    font-family: "DM Sans", serif;
+    font-weight: normal;
+}
+
+label#item-field {
+
+}
+
+
+span#admin-title {
+    font-family: 'Poppins', serif;
+    color: var(--admin-title);
+}
