@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/topHeader.php'; ?>
+<?php require APPROOT . '/views/inc/adminHeader.php'; ?>
 <?php require APPROOT . '/views/inc/template.php'; ?>
 <?php userEntry() ?>
 
