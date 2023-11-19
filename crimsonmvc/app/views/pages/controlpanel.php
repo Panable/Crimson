@@ -1,8 +1,19 @@
 <?php require APPROOT . '/views/inc/adminHeader.php'; ?>
+<?php require APPROOT . '/views/inc/sidebar.php'; ?>
+
 <?php userEntry() ?>
-<h1>
-    STAFF PANEL
-</h1>
+
+    <div class="container my-5"> <!-- Added mx-auto class to center the content -->
+        <!-- Repeatable Code -->
+        <span class="d-flex align-items-center mb-3" id="admin-title">
+            <span class="material-symbols-outlined fs-1"> dashboard </span>
+            <label class="ml-2 fs-3"> Control Panel </label>
+        </span>
+
+
+        <div id="content" class="d-flex justify-content-center">
+
+
 
 <?php
 if (isManager()) {
@@ -10,10 +21,13 @@ if (isManager()) {
     echo '<br>';
 }
 ?>
-<a href="<?php echo URLROOT ?>menu/waiter">Waiter Menu</a>
-<br>
-<a href="<?php echo URLROOT ?>roster/adminRoster">Roster</a>
-<br>
-<a href="<?php echo URLROOT ?>pages/about">Orders</a>
 
-<?php require APPROOT . '/views/inc/footer.php'; ?>
+
+        <a href="<?php echo URLROOT ?>menu/waiter">Waiter Menu</a>
+        <br>
+        <a href="<?php echo URLROOT ?>roster/adminRoster">Roster</a>
+        <br>
+        <a href="<?php echo URLROOT ?>pages/about">Orders</a>
+
+
+

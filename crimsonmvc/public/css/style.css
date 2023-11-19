@@ -82,21 +82,13 @@ input#email, input#password {
 
 /* Admin Menu Page Table Style */
 th {
-    font-family: 'DM Sans', sans-serif;
-}
-
-
-table > tbody > tr:nth-child(even), thead {
-    background-color: var(--table-bg-light);
     font-family: 'Roboto', sans-serif;
+    color: var(--light-text);
 }
+thead {
+    background-color: var(--nav-background);
 
-
-table > tbody > tr:nth-child(odd), tr {
-    background-color: var(--table-bg-dark);
-    font-family: 'Roboto', sans-serif;
 }
-
 
 #item-image {
     width: 100%;

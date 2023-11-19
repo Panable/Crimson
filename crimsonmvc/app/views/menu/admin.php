@@ -1,20 +1,18 @@
 <?php require APPROOT . '/views/inc/sidebar.php'; ?> <!-- header needs to be changed to size view-->
 <?php privelagedEntry() ?>
 
-
-<h1>ADMIN MENU PAGE</h1>
-
-
-
-<section class="card-section pt-4 mx-4">
-    <div class="my-5 mx-3">
-        <h2>Menu</h2>
-    </div>
+<div class="container my-5"> <!-- Added mx-auto class to center the content -->
+    <!-- Repeatable Code -->
+    <span class="d-flex align-items-center mb-3" id="admin-title">
+            <span class="material-symbols-outlined fs-1"> restaurant_menu </span>
+            <label class="ml-2 fs-3"> Admin Menu </label>
+        </span>
 
     <div class="d-flex flex-column">
+        <button type="button" class="btn btn-primary btn-sm"> Add Menu Item </button>
         <table class="table flex-grow-1">
         <thead>
-            <tr>
+            <tr class="rounded rounded-5">
                 <th scope="col">#</th>
                 <th scope="col">Image</th>
                 <th scope="col">Name</th>
@@ -39,7 +37,7 @@
 
                 $table .= '<tr>';
                 $table .= '<td>' . $item->id . '</td>';
-                $table .= '<td><img src="' . $img_source . '"></td>';
+                $table .= '<td class="w-25 h-25"><img class="rounded rounded-5" src="' . $img_source . '"></td>';
                 $table .= '<td>' . $item->name . '</td>';
                 $table .= '<td>' . "$" . $item->price . '</td>';
                 $table .= '<td>' . $item->description . '</td>';
@@ -75,4 +73,4 @@
             </li>
         </ul>
     </nav>
-</section>
+</div>
