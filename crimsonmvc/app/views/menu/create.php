@@ -15,6 +15,7 @@
         echo '<form action="http://localhost/crimsonmvc/menu/create/" method="post">';
 
         foreach ($tableData as $item) {
+            if ($item->Field == 'id') continue;
             echo '<div class="form-group">';
             echo '<label for="' . $item->Field . '">' . $item->Field . '</label>';
             echo '<input type="text" name="' . $item->Field . '" id="' . $item->Field . '" class="form-control">';
