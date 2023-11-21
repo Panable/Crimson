@@ -82,13 +82,21 @@ input#email, input#password {
 
 /* Admin Menu Page Table Style */
 th {
-    font-family: 'Roboto', sans-serif;
-    color: var(--light-text);
+    font-family: 'DM Sans', sans-serif;
 }
-thead {
-    background-color: var(--nav-background);
 
+
+table > tbody > tr:nth-child(even), thead {
+    background-color: var(--table-bg-light);
+    font-family: 'Roboto', sans-serif;
 }
+
+
+table > tbody > tr:nth-child(odd), tr {
+    background-color: var(--table-bg-dark);
+    font-family: 'Roboto', sans-serif;
+}
+
 
 #item-image {
     width: 100%;
@@ -172,13 +180,6 @@ span.material-symbols-outlined.p-2 {
 
 
 
-/* Forgot where this was suppose to be a part of, lol
-a#back-icon {
-    font-size: 24px;
-    color: var(--icon-color-nav);
-    background-color: var(--icon-border);
-}
-*/
 
 /* Create & Add Item */
 input#menu-item-edit {
@@ -195,4 +196,21 @@ label#item-field {
 span#admin-title {
     font-family: 'Poppins', serif;
     color: var(--admin-title);
+}
+
+/* Booking */
+#booking-title {
+    font-family: "Outfit", serif;
+}
+label#booking-field {
+    font-family: "Outfit", serif;
+
+}
+#booking-submit {
+    background-color: var(--backpage-green);
+    color: var(--light-text);
+    font-family: "Poppins", serif;
+}
+.form-control {
+    font-family: "Roboto", serif;
 }
