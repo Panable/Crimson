@@ -5,7 +5,7 @@
     <div class="container mt-5 mx-5">
         <span class="d-flex align-items-center mb-3 my-5" id="admin-title">
             <span class="material-symbols-outlined fs-1"> calendar_month </span>
-            <label class="ml-2 fs-3"> Admin - Create Roster</label>
+            <label class="ml-2 fs-3"> Admin - Roster</label>
         </span>
 
 
@@ -13,6 +13,12 @@
             <?php if (isManager()) : ?>
                 <button type="submit" class="btn btn-primary mt-3">Submit Roster</button>
             <?php endif; ?>
+
+            <!-- Employee Roster View | Read Only -->
+            <?php if (!isManager()) : ?>
+                <a href="<?php echo URLROOT; ?>roster/rosterRequest" class="btn btn-primary mt-3">Make Roster Request</a>
+            <?php endif; ?>
+
             <div class="row my-5">
                 <?php
                 $daysOfWeek = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY'];
@@ -36,9 +42,7 @@
         </form>
     </div>
 
-<?php if (!isManager()) : ?>
-    <a href="<?php echo URLROOT; ?>roster/rosterRequest" class="btn btn-primary mt-3">Make Roster Request</a>
-<?php endif; ?>
+
 
 <?php
 if (isManager()) :
@@ -49,12 +53,24 @@ if (isManager()) :
                 <label class="fs-3 text-white"> Roster Requests List</label>
             </div>
         </div>
-    <?php foreach ($data['requests'] as $value) : ?>
-        <div style="display: flex; justify-content: space-between;">
-            <p class="d-inline-block mr-3"><?= $value->Name ?></p>
-            <a href="<?= URLROOT ?>roster/viewRosterRequest/<?= $value->RosterRequestID ?>" class="btn btn-primary">View Request</a>
-        </div>
-    <?php endforeach; ?>
+        <table class="table ">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($data['requests'] as $value) : ?>
+                <tr>
+                    <td><?= $value->Name ?></td>
+                    <td>
+                        <a href="<?= URLROOT ?>roster/viewRosterRequest/<?= $value->RosterRequestID ?>" class="btn btn-primary">View Request</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
 
 <?php endif; ?>
 

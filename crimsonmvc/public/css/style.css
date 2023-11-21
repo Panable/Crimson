@@ -145,11 +145,6 @@ a#footer-link {
     font-family: 'Outfit', serif;
 }
 
-/*  Booking */
-#booking-body {
-    background: linear-gradient(0deg, rgba(29, 26, 26, 0.85) 0%, rgba(29, 26, 26, 0.85) 100%), url("https://h7.alamy.com/comp/2JDJ309/lovely-hand-drawn-coffee-seamless-pattern-cute-doodle-background-great-for-banners-wallpapers-wrapping-fabrics-vector-design-2JDJ309.jpg"), lightgray 50% / cover no-repeat;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
 
 
 
@@ -188,17 +183,19 @@ input#menu-item-edit {
     font-weight: normal;
 }
 
-label#item-field {
-
-}
-
 
 span#admin-title {
     font-family: 'Poppins', serif;
     color: var(--admin-title);
 }
 
-/* Booking */
+/*  Booking */
+#booking-body {
+    background: linear-gradient(0deg, rgba(29, 26, 26, 0.85) 0%, rgba(29, 26, 26, 0.85) 100%), url("https://h7.alamy.com/comp/2JDJ309/lovely-hand-drawn-coffee-seamless-pattern-cute-doodle-background-great-for-banners-wallpapers-wrapping-fabrics-vector-design-2JDJ309.jpg"), lightgray 50% / cover no-repeat;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
 #booking-title {
     font-family: "Outfit", serif;
 }
@@ -213,4 +210,43 @@ label#booking-field {
 }
 .form-control {
     font-family: "Roboto", serif;
+}
+
+
+/* Footer */
+#copyright {
+    font-family: 'DM Sans', serif;
+
+}
+
+
+/* Roster */
+option {
+    font-family: 'Roboto', serif;
+}
+div#day-header {
+    font-family: 'DM Sans', serif;
+
+}
+
+/* About Us */
+div#store-information{
+    background-color: var(--main-background);
+}
+
+#our-story {
+    background-color: var(--admin-title);
+}
+section#map {
+    background-color: var(--sidenav-color);
+}
+
+p.fs-3 {
+    font-family: 'DM Sans', serif;
+
+}
+
+div#menu {
+    background-color: #ECE2CC;
+    font-family: 'Outfit', serif;
 }

@@ -9,7 +9,7 @@ if (!@GetImageSize($img_source)) {
 ?>
 
 <div id="content" class="d-flex justify-content-center">
-    <div class="container my-auto"> <!-- Added mx-auto class to center the content -->
+    <div class="container my-auto">
         <!-- Repeatable Section -->
         <span class="d-flex align-items-center mb-3" id="admin-title">
             <span class="material-symbols-outlined fs-1"> edit </span>
@@ -36,7 +36,7 @@ if (!@GetImageSize($img_source)) {
                 </div>
 
                 <!-- Edit Section -->
-                <div id="edit-section" class="rounded rounded-3">
+                <div id="edit-section" class="rounded rounded-3 p-5">
                     <div class="col-12 d-flex">
 
 
