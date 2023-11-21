@@ -1,3 +1,4 @@
+<?php require APPROOT . '/views/inc/adminHeader.php'; ?>
 <?php require APPROOT . '/views/inc/sidebar.php'; ?>
 <?php privelagedEntry() ?>
 <?php $img_source = URLROOT . $data['menu']->photo;
@@ -9,7 +10,7 @@ if (!@GetImageSize($img_source)) {
 
 <div id="content" class="d-flex justify-content-center">
     <div class="container my-auto"> <!-- Added mx-auto class to center the content -->
-        <!-- Repeatable Code -->
+        <!-- Repeatable Section -->
         <span class="d-flex align-items-center mb-3" id="admin-title">
             <span class="material-symbols-outlined fs-1"> edit </span>
             <label class="ml-2 fs-3"> Edit Menu Item</label>

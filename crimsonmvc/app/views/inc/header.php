@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?php echo URLROOT; ?>css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
 
+</head>
 <body>
 <nav class="navbar navbar-expand-lg py-lg-4 bg-dark">
     <div class="col-sm">
