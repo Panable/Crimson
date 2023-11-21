@@ -45,7 +45,7 @@ if (!@GetImageSize($img_source)) {
                             <label id="item-field" class="fs-4"> ID </label>
                             <div id="item-input-wrapper">
                                 <label for="id">
-                                    <input type="number" name="menu-item-edit" class="form-control" readonly
+                                    <input type="number" name="id" class="form-control" readonly
                                            value="<?php echo $data['menu']->id; ?>">
                                 </label>
                             </div>
@@ -73,18 +73,6 @@ if (!@GetImageSize($img_source)) {
                                 </label>
                             </div>
                         </div>
-
-
-                        <!-- Upload New Photo Form -->
-                        <div class="form-group d-block m-5">
-                            <label id="item-field" class="fs-4">Upload New Photo</label>
-                            <div id="item-input-wrapper" class="fs-4">
-                                <label for="price">
-                                    <input type="file" name="new_photo" id="menu-item-edit" class="form-control">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Description Form -->
                     <div class="col mx-5">
