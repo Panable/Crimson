@@ -10,18 +10,28 @@
     <script src="https://kit.fontawesome.com/1b5b69c6d0.js"></script>
 
 </head>
-<nav class="navbar navbar-expand-lg py-lg-4 bg-dark">
-    <div class="col-sm">
-    </div>
+<nav class="navbar navbar-expand-lg py-lg-4 sticky-top bg-dark">
 
-    <div class="col-md">
+    <div class="col-sm">
         <h1 class="text-white text-center">Crimson Cafe</h1>
     </div>
-    <!-- Right Side Navbar -->
+
+    <div class="col-md text-center">
+        <a href=<?php echo URLROOT; ?>pages/index class="p-3 fs-4 text-white text-decoration-none">Home</a>
+        <a href=<?php echo URLROOT; ?>pages/about class="p-3 fs-4 text-white text-decoration-none">About Us</a>
+        <a href=<?php echo URLROOT; ?>menu/pickup class="p-3 fs-4 text-white text-decoration-none">Menu</a>
+        <a href=<?php echo URLROOT; ?>booking/booking class="p-3 fs-4 text-white text-decoration-none">Online Booking</a>
+    </div>
+
     <div class="col-sm">
         <div class="container my-2-md-0 mr-md-3">
-            <a href=<?php echo URLROOT; ?>pages/index class="p-2 text-white">Home</a>
-            <a href=<?php echo URLROOT; ?>pages/about class="p-2 text-white">About</a>
-            <a href=<?php echo URLROOT; ?>user/login class="p-2 text-white">Login</a>
+
+            <span class="material-symbols-outlined">
+                <a href=<?php echo URLROOT; ?>user/login class="p-2 fs-2 text-white text-decoration-none"> account_circle </a>
+            </span>
+
+            <span class="material-symbols-outlined">
+                <a href="" class="p-2 fs-2 text-white text-decoration-none"> shopping_cart</a>
+            </span>
         </div>
 </nav>

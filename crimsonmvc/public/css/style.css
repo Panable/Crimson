@@ -146,13 +146,12 @@ a#footer-link {
 }
 
 
-
-
 /* Sidebar */
 #sidenav-logo {
     font-family: "Croissant One", serif;
     color: var(--header1-text);
 }
+
 #sidebar-nav {
     display: inline-block;
     background-color: var(--sidenav-color);
@@ -162,6 +161,7 @@ a#sidebar-item {
     font-family: "Outfit", serif;
     color: var(--light-text);
 }
+
 #nav-icon {
     font-family: "Outfit", serif;
     font-size: 24px;
@@ -172,8 +172,6 @@ span.material-symbols-outlined.p-2 {
     color: var(--icon-color-nav);
     background-color: var(--icon-border);
 }
-
-
 
 
 /* Create & Add Item */
@@ -199,15 +197,18 @@ span#admin-title {
 #booking-title {
     font-family: "Outfit", serif;
 }
+
 label#booking-field {
     font-family: "Outfit", serif;
 
 }
+
 #booking-submit {
     background-color: var(--backpage-green);
     color: var(--light-text);
     font-family: "Poppins", serif;
 }
+
 .form-control {
     font-family: "Roboto", serif;
 }
@@ -224,19 +225,21 @@ label#booking-field {
 option {
     font-family: 'Roboto', serif;
 }
+
 div#day-header {
     font-family: 'DM Sans', serif;
 
 }
 
 /* About Us */
-div#store-information{
+div#store-information {
     background-color: var(--main-background);
 }
 
 #our-story {
     background-color: var(--admin-title);
 }
+
 section#map {
     background-color: var(--sidenav-color);
 }
@@ -249,4 +252,18 @@ p.fs-3 {
 div#menu {
     background-color: #ECE2CC;
     font-family: 'Outfit', serif;
+}
+
+
+/*landing page*/
+h4#index-title {
+    font-size: 96px;
+    font-family: "Croissant One", serif;
+    color: var(--header1-text);
+    text-align: center;
+}
+
+p#card-text {
+    font-family: 'Outfit', serif;
+
 }
