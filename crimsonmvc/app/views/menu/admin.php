@@ -1,4 +1,5 @@
-<?php require APPROOT . '/views/inc/sidebar.php'; ?> <!-- header needs to be changed to size view-->
+<?php require APPROOT . '/views/inc/adminHeader.php'; ?>
+<?php require APPROOT . '/views/inc/sidebar.php'; ?>
 <?php privelagedEntry() ?>
 
 <div class="container my-5"> <!-- Added mx-auto class to center the content -->

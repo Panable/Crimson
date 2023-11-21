@@ -7,9 +7,9 @@ function buildItemWithQuantity($quantityHtml, $img_source, $name_source, $price_
     }
     $img_source_attr = htmlspecialchars($img_source, ENT_QUOTES, 'UTF-8');
 
-    $image = '<div class="feature rounded-3 my-5 mt-n4 bg-white">
-                <img src="' . $img_source_attr . '"
-                     alt="Heavy\'s Sandvich">
+    $image = '<div class="feature rounded-3 my-5 mt-n4">
+                <img class="rounded rounded-5" src="' . $img_source_attr . '"
+                     alt="Heavy\'s Sandvich>
             </div>';
 
     $description = '<div class="card-body bg-light">
@@ -23,12 +23,12 @@ function buildItemWithQuantity($quantityHtml, $img_source, $name_source, $price_
                                </div>
                            </div>
                        </div>
-                       <p class="mb-0"> ' . $description_source . ' </p>'
+                       <p class="my-3 "> ' . $description_source . ' </p>'
         . $quantityHtml .
         '</div>';
 
     $card = '<div class="col-md-4 my-3">
-                <div class="card bg-light border-0 h-55">
+                <div class="card bg-light border-0 w-75 h-25">
                     <div class="shadow p-3 card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                         ' . $image . '
                         ' . $description . '

@@ -12,7 +12,9 @@
     <nav class="sidebar vh-100 w-25" id="sidebar-nav">
         <div class="text-center py-4">
             <div>
-                <label class="fs-2" id="sidenav-logo"> Crimson Café </label>
+                <a href="<?php echo URLROOT; ?>pages/index">
+                            <label class="fs-2" id="sidenav-logo"> Crimson Café </label>
+                </a>
             </div>
         </div>
 

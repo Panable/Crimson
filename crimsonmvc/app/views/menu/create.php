@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/adminHeader.php'; ?>
 <?php require APPROOT . '/views/inc/sidebar.php'; ?>
 <?php privelagedEntry() ?>
 
